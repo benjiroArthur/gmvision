@@ -13,24 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\PagesController::class, 'welcome'])->name('welcome');
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
 
-Route::get('/event', function () {
-    return view('pages.event');
-});
-Route::get('/gallery', function () {
-    return view('pages.page');
-});
+Route::get('/gallery', [App\Http\Controllers\PagesController::class, 'gallery'])->name('gallery');
+Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
 
-Route::get('/payment', function () {
-    return view('pages.payment');
-});
+Route::get('/payment', [App\Http\Controllers\PagesController::class, 'payment'])->name('payment');
 
 Auth::routes();
 

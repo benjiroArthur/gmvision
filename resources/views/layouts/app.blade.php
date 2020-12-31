@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -19,16 +20,25 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
         @include('inc.navbar')
-        @include('inc.messages')
         <div class="container-fluid">
-
+            @include('inc.messages')
             @yield('content')
         </div>
         @include('inc.footer')
     </div>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function()
+            {
+                $('.alert').fadeOut('slow');
+            },5000);
+        });
+    </script>
+    @yield('script')
 </body>
 </html>
