@@ -18,11 +18,16 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control pay-fields" name="donation_course">
-                        <option value="General Donation">General Donation</option>
+                        {{--<option value="General Donation">General Donation</option>
                         <option value="School Projects">School Projects</option>
                         <option value="Face Of Mother Ghana">Face Of Mother Ghana</option>
                         <option value="Face Of Golden Mothers">Face Of Golden Mothers</option>
-                        <option value="Women Empowerment">Women Empowerment</option>
+                        <option value="Women Empowerment">Women Empowerment</option>--}}
+                        @forelse($projects as $project)
+                            <option value="{{$project->id}}">{{$project->name}}</option>
+                        @empty
+                            <option >No Projects</option>
+                        @endforelse
                     </select>
                 </div>
                 <div class="form-group">

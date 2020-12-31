@@ -18,8 +18,8 @@
                                 <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
                                 <h1 class="wow cssanimation leFadeInRight sequence">Better Life for People</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Join With Us</a>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
+                                <a href="#" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                 <div class="col-md-4 xs-padding">
                     <div class="causes-content">
                         <div class="causes-thumb">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouselOneControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="{{asset('img/causes-1-1.jpg')}}" alt="First slide">
@@ -132,16 +132,16 @@
                                         <img class="d-block w-100" src="{{asset('img/causes-1-3.jpg')}}" alt="Third slide">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselOneControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselOneControls" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
-                            <a href="#" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
+                            <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">25%</span></div>
                             </div>
@@ -163,7 +163,7 @@
                 <div class="col-md-4 xs-padding">
                     <div class="causes-content">
                         <div class="causes-thumb">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouseltwoControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="{{asset('img/causes-2-1.jpg')}}" alt="First slide">
@@ -175,16 +175,16 @@
                                     {{--<img class="d-block w-100" src="{{asset('img/causes-2.jpg')}}" alt="Third slide">--}}
                                     {{--</div>--}}
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouseltwoControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouseltwoControls" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only dot">Next</span>
                                 </a>
                             </div>
-                            <a href="#" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
+                            <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">45%</span></div>
                             </div>
@@ -200,7 +200,7 @@
                 <div class="col-md-4 xs-padding">
                     <div class="causes-content">
                         <div class="causes-thumb">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouselThreeControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="{{asset('img/causes-3-1.jpg')}}" alt="First slide">
@@ -212,16 +212,16 @@
                                         <img class="d-block w-100" src="{{asset('img/causes-3-3.jpg')}}" alt="Third slide">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselThreeControls" role="button" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only text-primary">Previous</span>
+                                    <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselThreeControls" role="button" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
+                                    <span class="sr-only dot">Next</span>
                                 </a>
                             </div>
-                            <a href="#" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
+                            <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">75%</span></div>
                             </div>
@@ -246,7 +246,7 @@
                         <img class="profile" src="{{asset('img/profile.jpg')}}" alt="profile">
                         <h3>Mrs Aggrey Abundant <span>CEO & Founder of GMVINT.</span></h3>
                         <p>Lorem Ipsum is simply dummy printing and industry. It has survived not only five centuries, but also the leap.</p>
-                        <img src="{{asset('img/sign.png')}}" alt="sign">
+                        {{--<img src="{{asset('img/sign.png')}}" alt="sign">--}}
                     </div>
                 </div>
                 <div class="col-md-8 xs-padding">
@@ -265,13 +265,13 @@
                                 to safe guard the welfare of the poor and desirous of making optimum utilization
                                 of the benefits that can be accrued from Advocacy and sensitization Programmes.
                             </p>
-                            <a href="#" class="default-btn">Read More</a>
+                            {{--<a href="#" class="default-btn">Read More</a>--}}
                         </div>
                         <div class="col-md-6 xs-padding">
                             <img src="{{asset('img/mission.jpg')}}" alt="about-thumb">
                             <h3>Our Mission</h3>
-                            <p>Lorem Ipsum is simply dummy printing and industry. It has survived not only five centuries, but also the leap electronic type essentially unchanged.</p>
-                            <a href="#" class="default-btn">Read More</a>
+                            <p>The Mission of GMVI is to promote the welfare of Women, Children and the Marginalized in Ghana and other deprived economies</p>
+                            {{--<a href="#" class="default-btn">Read More</a>--}}
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                         {{--<h3><i class="ti-bar-chart"></i>Goal: $450000</h3>--}}
                         {{--<h3><i class="ti-thumb-up"></i>Raised: $55000</h3>--}}
                         {{--</div>--}}
-                        <a href="#" class="default-btn">Donate Now</a>
+                        <a href="{{url('/payment')}}" class="default-btn">Donate Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 xs-padding">
