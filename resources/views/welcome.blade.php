@@ -18,7 +18,7 @@
                                 <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
                                 <h1 class="wow cssanimation leFadeInRight sequence">Better Life for People</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Join With Us</a>
+                                <a href="#" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
                                 <a href="{{url('/payment')}}" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Donate Now</a>
                             </div>
                         </div>
@@ -32,8 +32,8 @@
                             <div class="slider-text">
                                 <h1 class="wow cssanimation fadeInTop" data-wow-delay="1s" data-wow-duration="800ms">Together we  <br>can make a Difference</h1>
                                 <p class="wow cssanimation fadeInBottom" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Join With Us</a>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
+                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
                             </div>
                         </div>
                     </div>
@@ -47,8 +47,8 @@
                                 <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
                                 <h1 class="wow cssanimation lePushReleaseFrom sequence" data-wow-delay="1s">Give a little. Change a lot.</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Join With Us</a>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
+                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
                             </div>
                         </div>
                     </div>
@@ -328,7 +328,8 @@
                             <div class="team-details">
                                 <img src="{{asset('img/team-1.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Jonathan Smith <span>Communicator</span></h3>
+                                    <h3>Jonathan Smith</h3>
+                                    <small class="text-white">Communicator</small>
                                 </div>
                             </div>
                         </div><!-- /Team-1 -->
@@ -336,7 +337,8 @@
                             <div class="team-details">
                                 <img src="{{asset('img/team-2.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Angelina Rose <span>Certified Reader</span></h3>
+                                    <h3>Angelina Rose</h3>
+                                    <small class="text-white">Certified Reader</small>
                                 </div>
                             </div>
                         </div><!-- /Team-2 -->
@@ -344,15 +346,17 @@
                             <div class="team-details">
                                 <img src="{{asset('img/team-3.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Taylor Swift <span>Event Creator</span></h3>
+                                    <h3>Taylor Swift</h3>
+                                    <small class="text-white">Event Creator</small>
                                 </div>
                             </div>
                         </div><!-- /Team-3 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/team-4.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/ben.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Michel Brown <span>Internet Specialist</span></h3>
+                                    <h3>Benjamin Arthur</h3>
+                                    <small class="text-white">Information Technology Expert</small>
                                 </div>
                             </div>
                         </div><!-- /Team-4 -->
@@ -507,58 +511,15 @@
     <section class="events-section bg-grey bd-bottom padding">
         <div class="container">
             <div class="section-heading text-center mb-40">
-                <h2>Upcoming Events</h2>
+                <h2>Events</h2>
                 <span class="heading-border"></span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> It has survived not only five centuries.</p>
+                <p>Golden Mothers Vision International organizes various events to raise funds to support its course as well as events to help identify exceptional talents in the society that needs support to realize their dreams</p>
             </div><!-- /Section Heading -->
-            <div id="event-carousel" class="events-wrap owl-Carousel">
-                <div class="events-item">
-                    <div class="event-thumb">
-                        <img src="{{asset('img/events-1.jpg')}}" alt="events">
-                    </div>
-                    <div class="event-details">
-                        <h3>Let's talk about the poor children education.</h3>
-                        <div class="event-info">
-                            <p><i class="ti-calendar"></i>Started On: 12:00 PM.</p>
-                            <p><i class="ti-location-pin"></i>Grand Mahal, Dubai 2100.</p>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries.</p>
-                        <a href="#" class="default-btn">Read More</a>
-                    </div>
-                </div><!-- Event-1 -->
-                <div class="events-item">
-                    <div class="event-thumb">
-                        <img src="{{asset('img/events-2.jpg')}}" alt="events">
-                    </div>
-                    <div class="event-details">
-                        <h3>Insure clean water to everyone in Africa.</h3>
-                        <div class="event-info">
-                            <p><i class="ti-calendar"></i>Started On: 12:00 PM.</p>
-                            <p><i class="ti-location-pin"></i>Grand Mahal, Dubai 2100.</p>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries.</p>
-                        <a href="#" class="default-btn">Read More</a>
-                    </div>
-                </div><!-- Event-2 -->
-                <div class="events-item">
-                    <div class="event-thumb">
-                        <img src="{{asset('img/events-3.jpg')}}" alt="events">
-                    </div>
-                    <div class="event-details">
-                        <h3>Nepal Earthquake Clean Water Initiative.</h3>
-                        <div class="event-info">
-                            <p><i class="ti-calendar"></i>Started On: 12:00 PM.</p>
-                            <p><i class="ti-location-pin"></i>Grand Mahal, Dubai 2100.</p>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries.</p>
-                        <a href="#" class="default-btn">Read More</a>
-                    </div>
-                </div><!-- Event-3 -->
-            </div>
+            <event-component></event-component>
         </div>
     </section><!-- Events Section -->
 
-    <section class="testimonial-section bd-bottom padding">
+   {{-- <section class="testimonial-section bd-bottom padding">
         <div class="container">
             <div class="section-heading text-center mb-40">
                 <h2>What People Say</h2>
@@ -590,15 +551,15 @@
                 <div class="testimonial-item">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     <div class="testi-footer">
-                        <img src="{{asset('img/team-4.jpg')}}" alt="profile">
-                        <h4>Michel Brown <span>Programer</span></h4>
+                        <img src="{{asset('img/volunteers/ben.jpg')}}" alt="profile">
+                        <h4>Benjamin Arthur <span>Programer</span></h4>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- Testimonial Section -->
+    </section>--}}<!-- Testimonial Section -->
 
-    <section class="blog-section bg-grey bd-bottom padding">
+    {{--<section class="blog-section bg-grey bd-bottom padding">
         <div class="container">
             <div class="section-heading text-center mb-40">
                 <h2>Recent Stories</h2>
@@ -676,7 +637,7 @@
                 </li>
             </ul>
         </div>
-    </div><!-- ./Sponsor Section -->
+    </div><!-- ./Sponsor Section -->--}}
 
 
 

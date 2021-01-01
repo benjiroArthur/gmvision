@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "vue-stack-grid": "^1.2.2",
         "vuetify": "^2.3.22"
     }
 }

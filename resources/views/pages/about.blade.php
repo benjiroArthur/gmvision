@@ -28,8 +28,11 @@
                 <div class="col-md-6 xs-padding">
                     <div class="about-content">
                         <h2>You are definitely intrigued to <br> discover who we are.</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the electronic more typesetting, remaining essentially unchanged.Nullam id dolor ultricies vehicula ut id elit.</p>
-                        <a href="#" class="default-btn">More About Us</a>
+                        <h3>Our Mission</h3>
+                        <p>The Mission of GMVI is to promote the welfare of Women, Children and the Marginalized in Ghana and other deprived economies</p>
+                        <h3>Our Vision</h3>
+                        <p>The Vision of GMVI is improved and sustained Dignity  and Equal Rights for Women, Children and the marginalized in Ghana and  beyond through the use of advocacy, sensitization and economic  empowerment tools/strategies</p>
+                        {{--<a href="#" class="default-btn">Read More</a>--}}
                     </div>
                 </div>
             </div>
@@ -48,34 +51,37 @@
                     <div class="team-wrap row">
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="img/team-1.jpg" alt="team">
+                                <img src="{{asset('img/team-1.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Jonathan Smith <span>Communicator</span></h3>
+                                    <h3>Jonathan Smith</h3>
+                                    <small class="text-white">Communicator</small>
                                 </div>
                             </div>
                         </div><!-- /Team-1 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="img/team-2.jpg" alt="team">
+                                <img src="{{asset('img/team-2.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Angelina Rose <span>Certified Reader</span></h3>
+                                    <h3>Angelina Rose</h3>
+                                    <small class="text-white">Certified Reader</small>
                                 </div>
                             </div>
-
                         </div><!-- /Team-2 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="img/team-3.jpg" alt="team">
+                                <img src="{{asset('img/team-3.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Taylor Swift <span>Event Creator</span></h3>
+                                    <h3>Taylor Swift</h3>
+                                    <small class="text-white">Event Creator</small>
                                 </div>
                             </div>
                         </div><!-- /Team-3 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="img/team-4.jpg" alt="team">
+                                <img src="{{asset('img/volunteers/ben.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Michel Brown <span>Internet Specialist</span></h3>
+                                    <h3>Benjamin Arthur</h3>
+                                    <small class="text-white">Information Technology Expert</small>
                                 </div>
                             </div>
                         </div><!-- /Team-4 -->
