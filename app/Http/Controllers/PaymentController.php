@@ -22,11 +22,14 @@ class PaymentController extends Controller
         //Initialize the required data here locally not from blade view
         $request->reference = $paystack->genTranxRef();
         $request->key = config('paystack.secretKey');
+        $request->amount .= '00';
+        $request->currency = 'GHS';
 
         try{
             return $paystack->getAuthorizationUrl()->redirectNow();
         }catch(\Exception $e) {
-            return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
+            dd($e);
+            return Redirect::back()->with('error', 'The paystack token has expired. Please refresh the page and try again.');
         }
     }
 
@@ -40,7 +43,7 @@ class PaymentController extends Controller
         $paystack = new Paystack();
         $paymentDetails = $paystack->getPaymentData();
 
-        dd($paymentDetails);
+        return $paymentDetails;
         // Now you have the payment details,
         // you can store the authorization_code in your db to allow for recurrent subscriptions
         // you can then redirect or do whatever you want
