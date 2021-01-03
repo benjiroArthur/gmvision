@@ -17,6 +17,11 @@ class CreateDonationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('donor_id');
             $table->double('amount');
+            $table->double('fees');
+            $table->double('balance');
+            $table->string('reference');
+            $table->string('currency');
+            $table->timestamp('paid_at');
             $table->unsignedBigInteger('project_id');
             $table->timestamps();
         });

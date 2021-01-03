@@ -3,18 +3,32 @@
 
 @section('content')
 <br><br><br>
-    <div class="row">
-        <div class="col-sm-1 col-md-3 col-lg-3"></div>
-        <div class="col-sm-1 col-md-6 col-lg-6">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <form novalidate class="form-control form-style text-center needs-validation" action="{{url('/pay')}}" method="post" id="payment-form">
                 {{ csrf_field() }}
-                <div class="form-group">
-                    <input type="text" class="form-control pay-fields" name="name" placeholder="Full Name" required>
-                    <div class="valid-feedback">
-                        looks good!
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control pay-fields" name="last_name" placeholder="Last Name" required>
+                            <div class="valid-feedback">
+                                looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please choose a last name.
+                            </div>
+                        </div>
                     </div>
-                    <div class="invalid-feedback">
-                        Please choose a name.
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control pay-fields" name="first_name" placeholder="Other Name(s)" required>
+                            <div class="valid-feedback">
+                                looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please choose a first name.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -27,7 +41,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4,9}" class="form-control pay-fields" name="phone_number" placeholder="Phone Number" required>
+                    <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4,9}" class="form-control pay-fields" name="phone" placeholder="Phone Number" required>
                     <div class="valid-feedback">
                         looks good!
                     </div>
@@ -45,11 +59,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <select class="form-control pay-fields" name="donation_course">
+                    <select class="form-control pay-fields" name="project_id">
                         @forelse($projects as $project)
                             <option value="{{$project->id}}">{{$project->name}}</option>
                         @empty
-                            <option >No Projects</option>
+                            <option>No Projects</option>
                         @endforelse
                     </select>
                 </div>
@@ -64,7 +78,6 @@
                 <p><small>Please note that you will be redirected to a trusted and secured payment platform (Paystack) to make the payment</small></p>
             </form>
         </div>
-        <div class="col-sm-1 col-md-3 col-lg-3"></div>
     </div>
     <br><br>
 
