@@ -11,11 +11,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register($app)
+    public function register()
     {
-        $app->bind('path.public', function() {
-            return base_path().'/public';
-        });
+//        $app->bind('path.public', function() {
+//            return base_path().'/public';
+//        });
     }
 
     /**
