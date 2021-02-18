@@ -7,8 +7,9 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    window.Popper = require('popper.js').default;
+    require('bootstrap');
 
     import('./vendor/imagesloaded.pkgd.min')
     import('./vendor/jquery.ajaxchimp.min')

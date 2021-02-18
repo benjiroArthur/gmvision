@@ -18668,3 +18668,11 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.active-nav {
+  color: #0b1af8 !important;
+}
+
+.no-under {
+  text-decoration: none !important;
+}
+

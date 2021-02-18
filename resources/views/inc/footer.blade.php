@@ -32,9 +32,9 @@
                 <div class="widget-content">
                     <h3>Info</h3>
                     <ul class="address">
-                        <li><i class="ti-email" style="color: white;"></i> Info@goldenmothersvisionint.com</li>
+                        <li><i class="ti-email" style="color: white;"></i>{{'Info@'.request()->getHost()}}</li>
                         <li><i class="ti-mobile" style="color: white;"></i> +(233) 0247719755</li>
-                        <li><i class="ti-world" style="color: white;"></i> Www.goldenmothersvisionint.com</li>
+                        <li id="website"><i class="ti-world" style="color: white;"></i>{{request()->getHost()}}</li>
                         <li><i class="ti-location-pin" style="color: white;"></i>Ghana, West Africa</li>
                     </ul>
                 </div>
@@ -50,15 +50,16 @@
             <div class="col-md-6 sm-padding">
                 <div class="copyright">&copy; 2018 Golden Mothers Vision International</div>
             </div>
-            <div class="col-md-6 sm-padding">
-                <ul class="footer-social">
-                    <li><a href="#">Orders</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Report Problem</a></li>
-                </ul>
+            <div class="col-md-6 sm-padding text-right">
+                <div class="copyright">Powered by Benjiro | +233 241 842 651</div>
+
             </div>
         </div>
     </div>
 </footer><!-- /Footer Section -->
 
 <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
+@section('script')
+    <script type="text/javascript">
+    </script>
+@endsection

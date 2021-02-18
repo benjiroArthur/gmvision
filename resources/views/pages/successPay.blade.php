@@ -23,22 +23,25 @@
 
 </head>
 <body>
-    <div id="app">
-        @include('inc.navbar')
-        <div class="container-fluid">
-            @include('inc.messages')
-            @yield('content')
+<div id="app">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    
+                </div>
+            </div>
         </div>
-        @include('inc.footer')
     </div>
-    <script>
-        $(document).ready(function(){
-            setTimeout(function()
-            {
-                $('.alert').fadeOut('slow');
-            },5000);
-        });
-    </script>
-    @yield('script')
+</div>
+<script>
+    $(document).ready(function(){
+        setTimeout(function()
+        {
+            $('.alert').fadeOut('slow');
+        },5000);
+    });
+</script>
+@yield('script')
 </body>
 </html>
