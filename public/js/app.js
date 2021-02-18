@@ -2170,7 +2170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_stack_grid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-stack-grid */ "./node_modules/vue-stack-grid/index.js");
+/* harmony import */ var vue_stack_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-stack-grid */ "./node_modules/vue-stack-grid/index.js");
 //
 //
 //
@@ -2194,8 +2194,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "GalleryComponent",
   components: {
-    Stack: vue_stack_grid__WEBPACK_IMPORTED_MODULE_0__["Stack"],
-    StackItem: vue_stack_grid__WEBPACK_IMPORTED_MODULE_0__["StackItem"]
+    Stack: vue_stack_grid__WEBPACK_IMPORTED_MODULE_1__["Stack"],
+    StackItem: vue_stack_grid__WEBPACK_IMPORTED_MODULE_1__["StackItem"]
   },
   data: function data() {
     return {
