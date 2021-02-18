@@ -12,7 +12,7 @@
             <div class="top-content-wrap row">
                 <div class="col-sm-8">
                     <ul class="left-info">
-                        <li><a href="#"><i class="ti-email"></i>info@goldenmothersvision.org</a></li>
+                        <li><a href="#"><i class="ti-email"></i>{{'Info@'.request()->getHost()}}</a></li>
                         <li><a href="#"><i class="ti-mobile"></i>+(233) 0247719755</a></li>
                     </ul>
                 </div>
