@@ -7,6 +7,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Vuetify from 'vuetify';
+Vue.use(Vuetify);
 
 /**
  * The following block of code may be used to automatically register your
@@ -22,6 +24,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('event-component', require('./components/EventsComponent.vue').default);
 Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
+Vue.component('dash-component', require('./components/DashboardComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,4 +34,5 @@ Vue.component('gallery-component', require('./components/GalleryComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify()
 });
