@@ -8,6 +8,7 @@
                 <img src="{{asset('img/slider-1.jpg')}}" alt="" title="#slider-caption-1"/>
                 <img src="{{asset('img/slider-5.jpg')}}" alt="" title="#slider-caption-2"/>
                 <img src="{{asset('img/slider-3.jpg')}}" alt="" title="#slider-caption-3"/>
+                <img src="{{asset('img/slider-2.jpg')}}" alt="" title="#slider-caption-2"/>
             </div><!-- /#main-slider -->
 
             <div id="slider-caption-1" class="nivo-html-caption slider-caption">
