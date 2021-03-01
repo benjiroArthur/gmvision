@@ -65,8 +65,8 @@
 {{--
                     <li><a class="nav-link"  style="color: {{ $routeName === 'event' ? '#0b1af8' : '' }}" href="{{url('/event')}}">Event</a></li>
 --}}
-                    <li><a class="nav-link"  style="color: {{ $routeName === 'gallery' ? '#0b1af8' : '' }}" href="{{url('/gallery')}}">Gallery</a></li>
-                    <li><a class="nav-link"  style="color: {{ $routeName === 'contact' ? '#0b1af8' : '' }}" href="{{url('/contact')}}">Contact</a></li>
+                   {{-- <li><a class="nav-link"  style="color: {{ $routeName === 'gallery' ? '#0b1af8' : '' }}" href="{{url('/gallery')}}">Gallery</a></li>
+                    <li><a class="nav-link"  style="color: {{ $routeName === 'contact' ? '#0b1af8' : '' }}" href="{{url('/contact')}}">Contact</a></li>--}}
                         @auth()
                             <li>
                                 <a class="nav-link" href="" onclick="event.preventDefault();

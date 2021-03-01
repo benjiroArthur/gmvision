@@ -69,10 +69,10 @@
                         </div><!-- /Team-2 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/team-3.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/steve.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Taylor Swift</h3>
-                                    <small class="text-white">Event Creator</small>
+                                    <h3>Stephenson Lordson</h3>
+                                    <small class="text-white">Executive Director, International Relation and Media Consultant</small>
                                 </div>
                             </div>
                         </div><!-- /Team-3 -->

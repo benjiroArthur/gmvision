@@ -56,8 +56,7 @@
             </div> <!-- /#slider-caption-3 -->
         </div>
     </section><!-- /#slider-Section -->
-
-    <section class="promo-section bd-bottom">
+    <section class="d-none d-lg-block d-md-block promo-section bd-bottom">
         <div class="promo-wrap">
             <div class="container">
                 <div class="row">
@@ -71,7 +70,7 @@
                             <p>
                                 Donate $1 dollar to give a life to that child who needs medical help and to the woman who needs empowerment.
                             </p>
-                            {{--<a href="#">Read More</a>--}}
+                            <a href="#">Read More</a>
                             <h3>DONATE NOW, DONATE TODAY.</h3>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                                 We are raising funds to support school building blocks and provision of educational materials in
                                 the Rural and Deprived communities in the country.
                             </P>
-                            {{--<a href="#">Read More</a>--}}
+                            <a href="#">Read More</a>
                             <h3>HELLO, DONATE NOW!</h3>
                         </div>
                     </div>
@@ -106,7 +105,56 @@
                 </div>
             </div>
         </div>
-    </section><!-- /Promo Section -->
+    </section>
+    <section class="d-md-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 xs-padding">
+                    <div class="promo-content">
+                        <img src="{{asset('img/icon-1.png')}}" alt="prmo icon">
+                        <h3>MAKE A DONATION</h3>
+                        <p>
+                            Every second, every minute, every hour, a child dies of malaria, Tuberculosis (TB) and other infectious diseases. Vulnerable women all over the world go through thick and thin to bring a standard to their children.
+                        </p>
+                        <p>
+                            Donate $1 dollar to give a life to that child who needs medical help and to the woman who needs empowerment.
+                        </p>
+                        <a href="#">Read More</a>
+                        <h3>DONATE NOW, DONATE TODAY.</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 xs-padding">
+                    <div class="promo-content">
+                        <img src="{{asset('img/icon-2.png')}}" alt="prmo icon">
+                        <h3>FUNDRAISING</h3>
+                        <p>
+                            Golden Mothers Vision International and coalition of NGO for Women and Children seeks to bring formal education to every child in every town or village in Ghana.
+                        </p>
+                        <br>
+                        <P>
+                            We are raising funds to support school building blocks and provision of educational materials in
+                            the Rural and Deprived communities in the country.
+                        </P>
+                        <a href="#">Read More</a>
+                        <h3>HELLO, DONATE NOW!</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 xs-padding">
+                    <div class="promo-content">
+                        <img src="{{asset('img/icon-3.png')}}" alt="prmo icon">
+                        <h3>Become A Volunteer</h3>
+                        <p>
+                            Become a volunteer of GMVINT today. Be a teacher to our village school and our
+                            community medical screening. Volunteer today with us as a foreigner
+                            and you stand a great chance of becoming part of our Ghanaian society.
+                        </p>
+                        <a href="#volunteers">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Promo Section -->
 
     <section class="causes-section bg-grey bd-bottom padding">
         <div class="container">
@@ -123,13 +171,13 @@
                             <div id="carouselOneControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="{{asset('img/causes-1-1.jpg')}}" alt="First slide">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-1.jpg')}}" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="{{asset('img/causes-1-2.jpg')}}" alt="Second slide">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-2.jpg')}}" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="{{asset('img/causes-1-3.jpg')}}" alt="Third slide">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-3.jpg')}}" alt="Third slide">
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselOneControls" role="button" data-slide="prev">
@@ -147,7 +195,7 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Face Of Golden Mother.</h3>
+                            <h3>Face Of Maternal Health.</h3>
                             <p>
                                 Maternal and Child Mortality is one of the biggest and challenging problems we face as a Nation.<br><br>
                             </p>
@@ -171,9 +219,9 @@
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="{{asset('img/causes-2-2.jpg')}}" alt="Second slide">
                                     </div>
-                                    {{--<div class="carousel-item">--}}
-                                    {{--<img class="d-block w-100" src="{{asset('img/causes-2.jpg')}}" alt="Third slide">--}}
-                                    {{--</div>--}}
+                                    {{--<div class="carousel-item">
+                                    <img class="d-block w-100" src="{{asset('img/causes-2.jpg')}}" alt="Third slide">
+                                    </div>--}}
                                 </div>
                                 <a class="carousel-control-prev" href="#carouseltwoControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -245,8 +293,8 @@
                     <div class="profile-wrap">
                         <img class="profile" src="{{asset('img/profile.jpg')}}" alt="profile">
                         <h3>Mrs Aggrey Abundant <span>CEO & Founder of GMVINT.</span></h3>
-                        <p>Lorem Ipsum is simply dummy printing and industry. It has survived not only five centuries, but also the leap.</p>
-                        {{--<img src="{{asset('img/sign.png')}}" alt="sign">--}}
+                        <about-ceo></about-ceo>
+                        <img width="100px" class="img-fluid" src="{{asset('img/signature.png')}}" alt="sign">
                     </div>
                 </div>
                 <div class="col-md-8 xs-padding">
@@ -344,10 +392,10 @@
                         </div><!-- /Team-2 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/team-3.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/steve.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Taylor Swift</h3>
-                                    <small class="text-white">Event Creator</small>
+                                    <h3>Stephenson Lordson</h3>
+                                    <small class="text-white">Executive Director, International Relation and Media Consultant</small>
                                 </div>
                             </div>
                         </div><!-- /Team-3 -->

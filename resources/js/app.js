@@ -25,6 +25,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('event-component', require('./components/EventsComponent.vue').default);
 Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
 Vue.component('dash-component', require('./components/DashboardComponent.vue').default);
+Vue.component('about-ceo', require('./components/AboutCeo.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
