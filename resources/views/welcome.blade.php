@@ -557,7 +557,7 @@
         </div>
     </section><!-- Counter Section -->
 
-    <section class="events-section bg-grey bd-bottom padding">
+    {{--<section class="events-section bg-grey bd-bottom padding">
         <div class="container">
             <div class="section-heading text-center mb-40">
                 <h2>Events</h2>
@@ -566,7 +566,8 @@
             </div><!-- /Section Heading -->
             <event-component></event-component>
         </div>
-    </section><!-- Events Section -->
+    </section>--}}
+    <!-- Events Section -->
 
    {{-- <section class="testimonial-section bd-bottom padding">
         <div class="container">

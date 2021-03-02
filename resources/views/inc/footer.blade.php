@@ -32,7 +32,10 @@
                 <div class="widget-content">
                     <h3>Info</h3>
                     <ul class="address">
-                        <li><i class="ti-email" style="color: white;"></i>{{'Info@'.request()->getHost()}}</li>
+                        <li><i class="ti-email" style="color: white;"></i>
+                            {{--{{'Info@'.request()->getHost()}}--}}
+                            gmvint@yahoo.com
+                        </li>
                         <li><i class="ti-mobile" style="color: white;"></i> +(233) 0247719755</li>
                         <li id="website"><i class="ti-world" style="color: white;"></i>{{request()->getHost()}}</li>
                         <li><i class="ti-location-pin" style="color: white;"></i>Ghana, West Africa</li>
