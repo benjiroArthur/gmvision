@@ -51,19 +51,19 @@
                     <div class="team-wrap row">
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/team-1.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/emma.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Jonathan Smith</h3>
-                                    <small class="text-white">Communicator</small>
+                                    <h3>Emmanuella Nana Adjoa Aggrey</h3>
+                                    <small class="text-white">Head of Arts and Creativity Department</small>
                                 </div>
                             </div>
                         </div><!-- /Team-1 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/team-2.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/pat.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Angelina Rose</h3>
-                                    <small class="text-white">Certified Reader</small>
+                                    <h3>Patricia</h3>
+                                    <small class="text-white">Head of Youth Development</small>
                                 </div>
                             </div>
                         </div><!-- /Team-2 -->
