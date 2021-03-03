@@ -402,10 +402,10 @@
                         </div><!-- /Team-3 -->
                         <div class="col-md-6">
                             <div class="team-details">
-                                <img src="{{asset('img/volunteers/ben.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/rebecca.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Benjamin Arthur</h3>
-                                    <small class="text-white">Information Technology Expert</small>
+                                    <h3>Rebecca Kumi Keyremeh</h3>
+                                    <small class="text-white">Professional Nurse</small>
                                 </div>
                             </div>
                         </div><!-- /Team-4 -->
