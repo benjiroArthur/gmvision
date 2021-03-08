@@ -286,6 +286,38 @@
             </div>
         </div>
     </section><!-- /Causes Section -->
+    <section>
+        <div class="section-heading text-center mb-40">
+            <h2>Happy International Women's Day</h2>
+            <span class="heading-border"></span>
+            <div class="container">
+                <p>Today we celebrate you.
+                    Let your achievements for yester years, bring a steering positive, demanding significant change to
+                    the community, the nation and your home.
+                    For if there must be a Change, it started with you. Aver that change to the next generation,
+                    let them know, <strong>Women are HELPERS, not punching bags, not sex slaves,</strong> but they are Powerful tool to effect
+                    positive change in any man's world. </p>
+                <p>
+                    <strong>".....This is the Bone of my bone, and the flesh of my flesh, and you, shall be called WOMAN!</strong>
+                </p>
+                <p>
+                    Great respect to all the men who have stood behind their women to be where they are now. As we celebrate our day, we also do appreciate your presence in our lives.
+                </p>
+                <p><strong>To God be the Glory for Creating WOMEN.</strong></p>
+            </div>
+        </div><!-- /Section Heading -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <img class="d-block w-100" src="{{asset('img/int_women/aggrey.jpg')}}" alt="Second slide">
+            </div>
+            <div class="col-md-4">
+                <img class="d-block w-100" src="{{asset('img/int_women/card.jpg')}}" alt="Fourth slide">
+            </div>
+            <div class="col-md-4">
+                <img class="d-block w-100" src="{{asset('img/int_women/mariama.jpg')}}" alt="Third slide">
+            </div>
+        </div>
+    </section><!-- /international women's day -->
 
     <section class="about-section bd-bottom shape circle padding">
         <div class="container">
