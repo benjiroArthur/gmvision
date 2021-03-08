@@ -1,2 +1,353 @@
-/*! For license information please see 13.js.LICENSE.txt */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{31:function(t,e,n){(function(n){var o,r,a,i;function u(t){return(u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}i=void 0!==n?n:this.window||this.global,r=[],o=function(t){"use strict";var e,n,o,r,a,i,c,l={},s="querySelector"in document&&"addEventListener"in t,f={selector:"[data-scroll]",selectorHeader:null,speed:500,easing:"easeInOutCubic",offset:0,callback:function(){}},d=function t(){var e={},n=!1,o=0,r=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(n=arguments[0],o++);for(var a=function(o){for(var r in o)Object.prototype.hasOwnProperty.call(o,r)&&(n&&"[object Object]"===Object.prototype.toString.call(o[r])?e[r]=t(!0,e[r],o[r]):e[r]=o[r])};o<r;o++){var i=arguments[o];a(i)}return e},h=function(t,e,n){var o=0;if(t.offsetParent)do{o+=t.offsetTop,t=t.offsetParent}while(t);return o=Math.max(o-e-n,0),Math.min(o,p()-m())},m=function(){return Math.max(document.documentElement.clientHeight,t.innerHeight||0)},p=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},b=function(t){return t?function(t){return Math.max(t.scrollHeight,t.offsetHeight,t.clientHeight)}(t)+t.offsetTop:0};l.animateScroll=function(n,o,i){var l=function(t){return t&&"object"==("undefined"==typeof JSON?"undefined":u(JSON))&&"function"==typeof JSON.parse?JSON.parse(t):{}}(o?o.getAttribute("data-options"):null),s=d(e||f,i||{},l),m="[object Number]"===Object.prototype.toString.call(n),g=m||!n.tagName?null:n;if(m||g){var v=t.pageYOffset;s.selectorHeader&&!r&&(r=document.querySelector(s.selectorHeader)),a||(a=b(r));var y,O,S=m?n:h(g,a,parseInt(s.offset,10)),H=S-v,I=p(),w=0,E=function(e,r,a){var i=t.pageYOffset;(e==r||i==r||t.innerHeight+i>=I)&&(clearInterval(a),function(e,n,o){o||(e.focus(),document.activeElement.id!==e.id&&(e.setAttribute("tabindex","-1"),e.focus(),e.style.outline="none"),t.scrollTo(0,n))}(n,r,m),s.callback(n,o))},A=function(){y=(y=(w+=16)/parseInt(s.speed,10))>1?1:y,O=v+H*function(t,e){var n;return"easeInQuad"===t&&(n=e*e),"easeOutQuad"===t&&(n=e*(2-e)),"easeInOutQuad"===t&&(n=e<.5?2*e*e:(4-2*e)*e-1),"easeInCubic"===t&&(n=e*e*e),"easeOutCubic"===t&&(n=--e*e*e+1),"easeInOutCubic"===t&&(n=e<.5?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1),"easeInQuart"===t&&(n=e*e*e*e),"easeOutQuart"===t&&(n=1- --e*e*e*e),"easeInOutQuart"===t&&(n=e<.5?8*e*e*e*e:1-8*--e*e*e*e),"easeInQuint"===t&&(n=e*e*e*e*e),"easeOutQuint"===t&&(n=1+--e*e*e*e*e),"easeInOutQuint"===t&&(n=e<.5?16*e*e*e*e*e:1+16*--e*e*e*e*e),n||e}(s.easing,y),t.scrollTo(0,Math.floor(O)),E(O,S,c)};0===t.pageYOffset&&t.scrollTo(0,0),clearInterval(c),c=setInterval(A,16)}};var g=function(e){t.location.hash,n&&(n.id=n.getAttribute("data-scroll-id"),l.animateScroll(n,o),n=null,o=null)},v=function(r){if(0===r.button&&!r.metaKey&&!r.ctrlKey&&(o=function(t,e){var n,o,r=e.charAt(0),a="classList"in document.documentElement;for("["===r&&(n=(e=e.substr(1,e.length-2)).split("=")).length>1&&(o=!0,n[1]=n[1].replace(/"/g,"").replace(/'/g,""));t&&t!==document&&1===t.nodeType;t=t.parentNode){if("."===r)if(a){if(t.classList.contains(e.substr(1)))return t}else if(new RegExp("(^|\\s)"+e.substr(1)+"(\\s|$)").test(t.className))return t;if("#"===r&&t.id===e.substr(1))return t;if("["===r&&t.hasAttribute(n[0])){if(!o)return t;if(t.getAttribute(n[0])===n[1])return t}if(t.tagName.toLowerCase()===e)return t}return null}(r.target,e.selector))&&"a"===o.tagName.toLowerCase()&&o.hostname===t.location.hostname&&o.pathname===t.location.pathname&&/#/.test(o.href)){var a=function(t){"#"===t.charAt(0)&&(t=t.substr(1));for(var e,n=String(t),o=n.length,r=-1,a="",i=n.charCodeAt(0);++r<o;){if(0===(e=n.charCodeAt(r)))throw new InvalidCharacterError("Invalid character: the input contains U+0000.");a+=e>=1&&e<=31||127==e||0===r&&e>=48&&e<=57||1===r&&e>=48&&e<=57&&45===i?"\\"+e.toString(16)+" ":e>=128||45===e||95===e||e>=48&&e<=57||e>=65&&e<=90||e>=97&&e<=122?n.charAt(r):"\\"+n.charAt(r)}return"#"+a}(o.hash);if("#"===a){r.preventDefault();var i=(n=document.body).id?n.id:"smooth-scroll-top";return n.setAttribute("data-scroll-id",i),n.id="",void(t.location.hash.substring(1)===i?g():t.location.hash=i)}(n=document.querySelector(a))&&(n.setAttribute("data-scroll-id",n.id),n.id="",o.hash===t.location.hash&&(r.preventDefault(),g()))}},y=function(t){i||(i=setTimeout((function(){i=null,a=b(r)}),66))};return l.destroy=function(){e&&(document.removeEventListener("click",v,!1),t.removeEventListener("resize",y,!1),e=null,n=null,o=null,r=null,a=null,i=null,c=null)},l.init=function(n){s&&(l.destroy(),e=d(f,n||{}),r=e.selectorHeader?document.querySelector(e.selectorHeader):null,a=b(r),document.addEventListener("click",v,!1),t.addEventListener("hashchange",g,!1),r&&t.addEventListener("resize",y,!1))},l}(i),void 0===(a="function"==typeof o?o.apply(e,r):o)||(t.exports=a)}).call(this,n(2))}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[13],{
+
+/***/ "./resources/js/vendor/venobox.min.js":
+/*!********************************************!*\
+  !*** ./resources/js/vendor/venobox.min.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ * VenoBox - jQuery Plugin
+ * version: 1.8.3
+ * @requires jQuery >= 1.7.0
+ *
+ * Examples at http://veno.es/venobox/
+ * License: MIT License
+ * License URI: https://github.com/nicolafranchini/VenoBox/blob/master/LICENSE
+ * Copyright 2013-2017 Nicola Franchini - @nicolafranchini
+ *
+ */
+!function (e) {
+  "use strict";
+
+  var s, i, c, a, o, t, d, l, r, n, v, u, b, k, p, m, h, f, g, x, y, w, C, _, B, P, E, O, D, M, N, U, V, I, z, R, X, Y, j, W, q;
+
+  e.fn.extend({
+    venobox: function venobox($) {
+      var A = this,
+          H = e.extend({
+        arrowsColor: "#B6B6B6",
+        autoplay: !1,
+        bgcolor: "#fff",
+        border: "0",
+        closeBackground: "#161617",
+        closeColor: "#d2d2d2",
+        framewidth: "",
+        frameheight: "",
+        gallItems: !1,
+        infinigall: !1,
+        htmlClose: "&times;",
+        htmlNext: "<span>Next</span>",
+        htmlPrev: "<span>Prev</span>",
+        numeratio: !1,
+        numerationBackground: "#161617",
+        numerationColor: "#d2d2d2",
+        numerationPosition: "top",
+        overlayClose: !0,
+        overlayColor: "rgba(23,23,23,0.85)",
+        spinner: "double-bounce",
+        spinColor: "#d2d2d2",
+        titleattr: "title",
+        titleBackground: "#161617",
+        titleColor: "#d2d2d2",
+        titlePosition: "top",
+        cb_pre_open: function cb_pre_open() {
+          return !0;
+        },
+        cb_post_open: function cb_post_open() {},
+        cb_pre_close: function cb_pre_close() {
+          return !0;
+        },
+        cb_post_close: function cb_post_close() {},
+        cb_post_resize: function cb_post_resize() {},
+        cb_after_nav: function cb_after_nav() {},
+        cb_init: function cb_init() {}
+      }, $);
+      return H.cb_init(A), this.each(function () {
+        if ((D = e(this)).data("venobox")) return !0;
+
+        function $() {
+          y = D.data("gall"), h = D.data("numeratio"), u = D.data("gallItems"), b = D.data("infinigall"), k = u || e('.vbox-item[data-gall="' + y + '"]'), w = k.eq(k.index(D) + 1), C = k.eq(k.index(D) - 1), w.length || !0 !== b || (w = k.eq(0)), k.length > 1 ? (M = k.index(D) + 1, c.html(M + " / " + k.length)) : M = 1, !0 === h ? c.show() : c.hide(), "" !== x ? a.show() : a.hide(), w.length || !0 === b ? (e(".vbox-next").css("display", "block"), _ = !0) : (e(".vbox-next").css("display", "none"), _ = !1), k.index(D) > 0 || !0 === b ? (e(".vbox-prev").css("display", "block"), B = !0) : (e(".vbox-prev").css("display", "none"), B = !1), !0 !== B && !0 !== _ || (d.on(K.DOWN, F), d.on(K.MOVE, G), d.on(K.UP, J));
+        }
+
+        function Q(e) {
+          return !(e.length < 1) && !p && (p = !0, f = e.data("overlay") || e.data("overlaycolor"), n = e.data("framewidth"), v = e.data("frameheight"), o = e.data("border"), i = e.data("bgcolor"), l = e.data("href") || e.attr("href"), s = e.data("autoplay"), x = e.attr(e.data("titleattr")) || "", e === C && d.addClass("animated").addClass("swipe-right"), e === w && d.addClass("animated").addClass("swipe-left"), E.show(), void d.animate({
+            opacity: 0
+          }, 500, function () {
+            g.css("background", f), d.removeClass("animated").removeClass("swipe-left").removeClass("swipe-right").css({
+              "margin-left": 0,
+              "margin-right": 0
+            }), "iframe" == e.data("vbtype") ? ce() : "inline" == e.data("vbtype") ? oe() : "ajax" == e.data("vbtype") ? ie() : "video" == e.data("vbtype") ? ae(s) : (d.html('<img src="' + l + '">'), te()), D = e, $(), p = !1, H.cb_after_nav(D, M, w, C);
+          }));
+        }
+
+        function S(e) {
+          27 === e.keyCode && T(), 37 == e.keyCode && !0 === B && Q(C), 39 == e.keyCode && !0 === _ && Q(w);
+        }
+
+        function T() {
+          if (!1 === H.cb_pre_close(D, M, w, C)) return !1;
+          e("body").off("keydown", S).removeClass("vbox-open"), D.focus(), g.animate({
+            opacity: 0
+          }, 500, function () {
+            g.remove(), p = !1, H.cb_post_close();
+          });
+        }
+
+        A.VBclose = function () {
+          T();
+        }, D.addClass("vbox-item"), D.data("framewidth", H.framewidth), D.data("frameheight", H.frameheight), D.data("border", H.border), D.data("bgcolor", H.bgcolor), D.data("numeratio", H.numeratio), D.data("gallItems", H.gallItems), D.data("infinigall", H.infinigall), D.data("overlaycolor", H.overlayColor), D.data("titleattr", H.titleattr), D.data("venobox", !0), D.on("click", function (u) {
+          if (u.preventDefault(), D = e(this), !1 === H.cb_pre_open(D)) return !1;
+
+          switch (A.VBnext = function () {
+            Q(w);
+          }, A.VBprev = function () {
+            Q(C);
+          }, f = D.data("overlay") || D.data("overlaycolor"), n = D.data("framewidth"), v = D.data("frameheight"), s = D.data("autoplay") || H.autoplay, o = D.data("border"), i = D.data("bgcolor"), _ = !1, B = !1, p = !1, l = D.data("href") || D.attr("href"), r = D.data("css") || "", x = D.attr(D.data("titleattr")) || "", P = '<div class="vbox-preloader">', H.spinner) {
+            case "rotating-plane":
+              P += '<div class="sk-rotating-plane"></div>';
+              break;
+
+            case "double-bounce":
+              P += '<div class="sk-double-bounce"><div class="sk-child sk-double-bounce1"></div><div class="sk-child sk-double-bounce2"></div></div>';
+              break;
+
+            case "wave":
+              P += '<div class="sk-wave"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>';
+              break;
+
+            case "wandering-cubes":
+              P += '<div class="sk-wandering-cubes"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div></div>';
+              break;
+
+            case "spinner-pulse":
+              P += '<div class="sk-spinner sk-spinner-pulse"></div>';
+              break;
+
+            case "chasing-dots":
+              P += '<div class="sk-chasing-dots"><div class="sk-child sk-dot1"></div><div class="sk-child sk-dot2"></div></div>';
+              break;
+
+            case "three-bounce":
+              P += '<div class="sk-three-bounce"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div>';
+              break;
+
+            case "circle":
+              P += '<div class="sk-circle"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div>';
+              break;
+
+            case "cube-grid":
+              P += '<div class="sk-cube-grid"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div>';
+              break;
+
+            case "fading-circle":
+              P += '<div class="sk-fading-circle"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>';
+              break;
+
+            case "folding-cube":
+              P += '<div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>';
+          }
+
+          return P += "</div>", O = '<a class="vbox-next">' + H.htmlNext + '</a><a class="vbox-prev">' + H.htmlPrev + "</a>", U = '<div class="vbox-title"></div><div class="vbox-num">0/0</div><div class="vbox-close">' + H.htmlClose + "</div>", t = '<div class="vbox-overlay ' + r + '" style="background:' + f + '">' + P + '<div class="vbox-container"><div class="vbox-content"></div></div>' + U + O + "</div>", e("body").append(t).addClass("vbox-open"), e(".vbox-preloader div:not(.sk-circle) .sk-child, .vbox-preloader .sk-rotating-plane, .vbox-preloader .sk-rect, .vbox-preloader div:not(.sk-folding-cube) .sk-cube, .vbox-preloader .sk-spinner-pulse").css("background-color", H.spinColor), g = e(".vbox-overlay"), e(".vbox-container"), d = e(".vbox-content"), c = e(".vbox-num"), a = e(".vbox-title"), (E = e(".vbox-preloader")).show(), a.css(H.titlePosition, "-1px"), a.css({
+            color: H.titleColor,
+            "background-color": H.titleBackground
+          }), e(".vbox-close").css({
+            color: H.closeColor,
+            "background-color": H.closeBackground
+          }), e(".vbox-num").css(H.numerationPosition, "-1px"), e(".vbox-num").css({
+            color: H.numerationColor,
+            "background-color": H.numerationBackground
+          }), e(".vbox-next span, .vbox-prev span").css({
+            "border-top-color": H.arrowsColor,
+            "border-right-color": H.arrowsColor
+          }), d.html(""), d.css("opacity", "0"), g.css("opacity", "0"), $(), g.animate({
+            opacity: 1
+          }, 250, function () {
+            "iframe" == D.data("vbtype") ? ce() : "inline" == D.data("vbtype") ? oe() : "ajax" == D.data("vbtype") ? ie() : "video" == D.data("vbtype") ? ae(s) : (d.html('<img src="' + l + '">'), te()), H.cb_post_open(D, M, w, C);
+          }), e("body").keydown(S), e(".vbox-prev").on("click", function () {
+            Q(C);
+          }), e(".vbox-next").on("click", function () {
+            Q(w);
+          }), !1;
+        });
+        var Z = ".vbox-overlay";
+
+        function F(e) {
+          d.addClass("animated"), I = R = e.pageY, z = X = e.pageX, N = !0;
+        }
+
+        function G(e) {
+          if (!0 === N) {
+            X = e.pageX, R = e.pageY, j = X - z, W = R - I;
+            var s = Math.abs(j);
+            s > Math.abs(W) && s <= 100 && (e.preventDefault(), d.css("margin-left", j));
+          }
+        }
+
+        function J(e) {
+          if (!0 === N) {
+            N = !1;
+            var s = D,
+                i = !1;
+            (Y = X - z) < 0 && !0 === _ && (s = w, i = !0), Y > 0 && !0 === B && (s = C, i = !0), Math.abs(Y) >= q && !0 === i ? Q(s) : d.css({
+              "margin-left": 0,
+              "margin-right": 0
+            });
+          }
+        }
+
+        H.overlayClose || (Z = ".vbox-close"), e("body").on("click", Z, function (s) {
+          (e(s.target).is(".vbox-overlay") || e(s.target).is(".vbox-content") || e(s.target).is(".vbox-close") || e(s.target).is(".vbox-preloader")) && T();
+        }), z = 0, X = 0, Y = 0, q = 50, N = !1;
+
+        var K = {
+          DOWN: "touchmousedown",
+          UP: "touchmouseup",
+          MOVE: "touchmousemove"
+        },
+            L = function L(s) {
+          var i;
+
+          switch (s.type) {
+            case "mousedown":
+              i = K.DOWN;
+              break;
+
+            case "mouseup":
+            case "mouseout":
+              i = K.UP;
+              break;
+
+            case "mousemove":
+              i = K.MOVE;
+              break;
+
+            default:
+              return;
+          }
+
+          var c = se(i, s, s.pageX, s.pageY);
+          e(s.target).trigger(c);
+        },
+            ee = function ee(s) {
+          var i;
+
+          switch (s.type) {
+            case "touchstart":
+              i = K.DOWN;
+              break;
+
+            case "touchend":
+              i = K.UP;
+              break;
+
+            case "touchmove":
+              i = K.MOVE;
+              break;
+
+            default:
+              return;
+          }
+
+          var c,
+              a = s.originalEvent.touches[0];
+          c = i == K.UP ? se(i, s, null, null) : se(i, s, a.pageX, a.pageY), e(s.target).trigger(c);
+        },
+            se = function se(s, i, c, a) {
+          return e.Event(s, {
+            pageX: c,
+            pageY: a,
+            originalEvent: i
+          });
+        };
+
+        function ie() {
+          e.ajax({
+            url: l,
+            cache: !1
+          }).done(function (e) {
+            d.html('<div class="vbox-inline">' + e + "</div>"), te();
+          }).fail(function () {
+            d.html('<div class="vbox-inline"><p>Error retrieving contents, please retry</div>'), de();
+          });
+        }
+
+        function ce() {
+          d.html('<iframe class="venoframe" src="' + l + '"></iframe>'), de();
+        }
+
+        function ae(e) {
+          var s,
+              i = function (e) {
+            var s;
+            e.match(/(http:|https:|)\/\/(player.|www.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com))\/(video\/|embed\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/), RegExp.$3.indexOf("youtu") > -1 ? s = "youtube" : RegExp.$3.indexOf("vimeo") > -1 && (s = "vimeo");
+            return {
+              type: s,
+              id: RegExp.$6
+            };
+          }(l),
+              c = (e ? "?rel=0&autoplay=1" : "?rel=0") + function (e) {
+            var s = "",
+                i = decodeURIComponent(e).split("?");
+
+            if (void 0 !== i[1]) {
+              var c,
+                  a,
+                  o = i[1].split("&");
+
+              for (a = 0; a < o.length; a++) {
+                c = o[a].split("="), s = s + "&" + c[0] + "=" + c[1];
+              }
+            }
+
+            return encodeURI(s);
+          }(l);
+
+          "vimeo" == i.type ? s = "https://player.vimeo.com/video/" : "youtube" == i.type && (s = "https://www.youtube.com/embed/"), d.html('<iframe class="venoframe vbvid" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" src="' + s + i.id + c + '"></iframe>'), de();
+        }
+
+        function oe() {
+          d.html('<div class="vbox-inline">' + e(l).html() + "</div>"), de();
+        }
+
+        function te() {
+          (V = d.find("img")).length ? V.each(function () {
+            e(this).one("load", function () {
+              de();
+            });
+          }) : de();
+        }
+
+        function de() {
+          a.html(x), d.find(">:first-child").addClass("figlio").css({
+            width: n,
+            height: v,
+            padding: o,
+            background: i
+          }), e("img.figlio").on("dragstart", function (e) {
+            e.preventDefault();
+          }), le(), d.animate({
+            opacity: "1"
+          }, "slow", function () {
+            E.hide();
+          });
+        }
+
+        function le() {
+          var s = d.outerHeight(),
+              i = e(window).height();
+          m = s + 60 < i ? (i - s) / 2 : "30px", d.css("margin-top", m), d.css("margin-bottom", m), H.cb_post_resize();
+        }
+
+        "ontouchstart" in window ? (e(document).on("touchstart", ee), e(document).on("touchmove", ee), e(document).on("touchend", ee)) : (e(document).on("mousedown", L), e(document).on("mouseup", L), e(document).on("mouseout", L), e(document).on("mousemove", L)), e(window).resize(function () {
+          e(".vbox-content").length && setTimeout(le(), 800);
+        });
+      });
+    }
+  });
+}(jQuery);
+
+/***/ })
+
+}]);

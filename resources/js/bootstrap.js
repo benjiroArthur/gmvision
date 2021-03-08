@@ -11,15 +11,15 @@ try {
     window.Popper = require('popper.js').default;
     require('bootstrap');
 
-    import('./vendor/imagesloaded.pkgd.min')
-    import('./vendor/jquery.ajaxchimp.min')
-    import('./vendor/jquery.counterup.min')
-    import('./vendor/jquery.isotope.v3.0.2')
+    // import('./vendor/imagesloaded.pkgd.min')
+    // import('./vendor/jquery.ajaxchimp.min')
+    // import('./vendor/jquery.counterup.min')
+    // import('./vendor/jquery.isotope.v3.0.2')
     import('./vendor/jquery.nivo.slider.pack')
     import('./vendor/jquery.slicknav.min')
-    import('./vendor/jquery.waypoints.v2.0.3.min')
+    // import('./vendor/jquery.waypoints.v2.0.3.min')
     import('./vendor/letteranimation.min')
-    import('./vendor/modernizr-2.8.3-respond-1.4.2.min')
+    // import('./vendor/modernizr-2.8.3-respond-1.4.2.min')
     import('./vendor/owl.carousel.min')
     import('./vendor/smooth-scroll.min')
     import('./vendor/tether.min')
@@ -27,7 +27,7 @@ try {
     import('./vendor/wow.min')
 
     import('./main.js');
-    import('./contact.js');
+    // import('./contact.js');
 } catch (e) {}
 
 /**

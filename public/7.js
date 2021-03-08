@@ -1,1 +1,353 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{25:function(i,t){var e,n;e=jQuery,n=function(i,t){var n=e.extend({},e.fn.nivoSlider.defaults,t),a={currentSlide:0,currentImage:"",totalSlides:0,running:!1,paused:!1,stop:!1,controlNavEl:!1},o=e(i);o.data("nivo:vars",a).addClass("nivoSlider");var r=o.children();r.each((function(){var i=e(this),t="";i.is("img")||(i.is("a")&&(i.addClass("nivo-imageLink"),t=i),i=i.find("img:first"));var n=0===n?i.attr("width"):i.width(),o=0===o?i.attr("height"):i.height();""!==t&&t.css("display","none"),i.css("display","none"),a.totalSlides++})),n.randomStart&&(n.startSlide=Math.floor(Math.random()*a.totalSlides)),n.startSlide>0&&(n.startSlide>=a.totalSlides&&(n.startSlide=a.totalSlides-1),a.currentSlide=n.startSlide),e(r[a.currentSlide]).is("img")?a.currentImage=e(r[a.currentSlide]):a.currentImage=e(r[a.currentSlide]).find("img:first"),e(r[a.currentSlide]).is("a")&&e(r[a.currentSlide]).css("display","block");var s=e("<img/>").addClass("nivo-main-image");s.attr("src",a.currentImage.attr("src")).show(),o.append(s),e(window).resize((function(){o.children("img").width(o.width()),s.attr("src",a.currentImage.attr("src")),s.stop().height("auto"),e(".nivo-slice").remove(),e(".nivo-box").remove()})),o.append(e('<div class="nivo-caption"></div>'));var c=function(i){var t=e(".nivo-caption",o);if(""!=a.currentImage.attr("title")&&null!=a.currentImage.attr("title")){var n=a.currentImage.attr("title");"#"==n.substr(0,1)&&(n=e(n).html()),"block"==t.css("display")?setTimeout((function(){t.html(n)}),i.animSpeed):(t.html(n),t.stop().fadeIn(i.animSpeed))}else t.stop().fadeOut(i.animSpeed)};c(n);var l=0;if(!n.manualAdvance&&r.length>1&&(l=setInterval((function(){p(o,r,n,!1)}),n.pauseTime)),n.directionNav&&(o.append('<div class="nivo-directionNav"><a class="nivo-prevNav">'+n.prevText+'</a><a class="nivo-nextNav">'+n.nextText+"</a></div>"),e(o).on("click","a.nivo-prevNav",(function(){if(a.running)return!1;clearInterval(l),l="",a.currentSlide-=2,p(o,r,n,"prev")})),e(o).on("click","a.nivo-nextNav",(function(){if(a.running)return!1;clearInterval(l),l="",p(o,r,n,"next")}))),n.controlNav){a.controlNavEl=e('<div class="nivo-controlNav"></div>'),o.after(a.controlNavEl);for(var d=0;d<r.length;d++)if(n.controlNavThumbs){a.controlNavEl.addClass("nivo-thumbs-enabled");var v=r.eq(d);v.is("img")||(v=v.find("img:first")),v.attr("data-thumb")&&a.controlNavEl.append('<a class="nivo-control" rel="'+d+'"><img src="'+v.attr("data-thumb")+'" alt="" /></a>')}else a.controlNavEl.append('<a class="nivo-control" rel="'+d+'">'+(d+1)+"</a>");e("a:eq("+a.currentSlide+")",a.controlNavEl).addClass("active"),e("a",a.controlNavEl).bind("click",(function(){return!a.running&&!e(this).hasClass("active")&&(clearInterval(l),l="",s.attr("src",a.currentImage.attr("src")),a.currentSlide=e(this).attr("rel")-1,void p(o,r,n,"control"))}))}n.pauseOnHover&&o.hover((function(){a.paused=!0,clearInterval(l),l=""}),(function(){a.paused=!1,""!==l||n.manualAdvance||(l=setInterval((function(){p(o,r,n,!1)}),n.pauseTime))})),o.bind("nivo:animFinished",(function(){s.attr("src",a.currentImage.attr("src")),a.running=!1,e(r).each((function(){e(this).is("a")&&e(this).css("display","none")})),e(r[a.currentSlide]).is("a")&&e(r[a.currentSlide]).css("display","block"),""!==l||a.paused||n.manualAdvance||(l=setInterval((function(){p(o,r,n,!1)}),n.pauseTime)),n.afterChange.call(this)}));var h=function(i,t,n){e(n.currentImage).parent().is("a")&&e(n.currentImage).parent().css("display","block"),e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").width(i.width()).css("visibility","hidden").show();for(var a=e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").parent().is("a")?e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").parent().height():e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").height(),o=0;o<t.slices;o++){var r=Math.round(i.width()/t.slices);o===t.slices-1?i.append(e('<div class="nivo-slice" name="'+o+'"><img src="'+n.currentImage.attr("src")+'" style="position:absolute; width:'+i.width()+"px; height:auto; display:block !important; top:0; left:-"+(r+o*r-r)+'px;" /></div>').css({left:r*o+"px",width:i.width()-r*o+"px",height:a+"px",opacity:"0",overflow:"hidden"})):i.append(e('<div class="nivo-slice" name="'+o+'"><img src="'+n.currentImage.attr("src")+'" style="position:absolute; width:'+i.width()+"px; height:auto; display:block !important; top:0; left:-"+(r+o*r-r)+'px;" /></div>').css({left:r*o+"px",width:r+"px",height:a+"px",opacity:"0",overflow:"hidden"}))}e(".nivo-slice",i).height(a),s.stop().animate({height:e(n.currentImage).height()},t.animSpeed)},m=function(i,t,n){e(n.currentImage).parent().is("a")&&e(n.currentImage).parent().css("display","block"),e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").width(i.width()).css("visibility","hidden").show();for(var a=Math.round(i.width()/t.boxCols),o=Math.round(e('img[src="'+n.currentImage.attr("src")+'"]',i).not(".nivo-main-image,.nivo-control img").height()/t.boxRows),r=0;r<t.boxRows;r++)for(var c=0;c<t.boxCols;c++)c===t.boxCols-1?(i.append(e('<div class="nivo-box" name="'+c+'" rel="'+r+'"><img src="'+n.currentImage.attr("src")+'" style="position:absolute; width:'+i.width()+"px; height:auto; display:block; top:-"+o*r+"px; left:-"+a*c+'px;" /></div>').css({opacity:0,left:a*c+"px",top:o*r+"px",width:i.width()-a*c+"px"})),e('.nivo-box[name="'+c+'"]',i).height(e('.nivo-box[name="'+c+'"] img',i).height()+"px")):(i.append(e('<div class="nivo-box" name="'+c+'" rel="'+r+'"><img src="'+n.currentImage.attr("src")+'" style="position:absolute; width:'+i.width()+"px; height:auto; display:block; top:-"+o*r+"px; left:-"+a*c+'px;" /></div>').css({opacity:0,left:a*c+"px",top:o*r+"px",width:a+"px"})),e('.nivo-box[name="'+c+'"]',i).height(e('.nivo-box[name="'+c+'"] img',i).height()+"px"));s.stop().animate({height:e(n.currentImage).height()},t.animSpeed)},p=function(i,t,n,a){var o=i.data("nivo:vars");if(o&&o.currentSlide===o.totalSlides-1&&n.lastSlide.call(this),(!o||o.stop)&&!a)return!1;n.beforeChange.call(this),a?("prev"===a&&s.attr("src",o.currentImage.attr("src")),"next"===a&&s.attr("src",o.currentImage.attr("src"))):s.attr("src",o.currentImage.attr("src")),o.currentSlide++,o.currentSlide===o.totalSlides&&(o.currentSlide=0,n.slideshowEnd.call(this)),o.currentSlide<0&&(o.currentSlide=o.totalSlides-1),e(t[o.currentSlide]).is("img")?o.currentImage=e(t[o.currentSlide]):o.currentImage=e(t[o.currentSlide]).find("img:first"),n.controlNav&&(e("a",o.controlNavEl).removeClass("active"),e("a:eq("+o.currentSlide+")",o.controlNavEl).addClass("active")),c(n),e(".nivo-slice",i).remove(),e(".nivo-box",i).remove();var r=n.effect,l="";"random"===n.effect&&(l=new Array("sliceDownRight","sliceDownLeft","sliceUpRight","sliceUpLeft","sliceUpDown","sliceUpDownLeft","fold","fade","boxRandom","boxRain","boxRainReverse","boxRainGrow","boxRainGrowReverse"),void 0===(r=l[Math.floor(Math.random()*(l.length+1))])&&(r="fade")),-1!==n.effect.indexOf(",")&&(l=n.effect.split(","),void 0===(r=l[Math.floor(Math.random()*l.length)])&&(r="fade")),o.currentImage.attr("data-transition")&&(r=o.currentImage.attr("data-transition")),o.running=!0;var d=0,v=0,p="",f="",g="",x="";if("sliceDown"===r||"sliceDownRight"===r||"sliceDownLeft"===r)h(i,n,o),d=0,v=0,p=e(".nivo-slice",i),"sliceDownLeft"===r&&(p=e(".nivo-slice",i)._reverse()),p.each((function(){var t=e(this);t.css({top:"0px"}),v===n.slices-1?setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}))}),100+d):setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed)}),100+d),d+=50,v++}));else if("sliceUp"===r||"sliceUpRight"===r||"sliceUpLeft"===r)h(i,n,o),d=0,v=0,p=e(".nivo-slice",i),"sliceUpLeft"===r&&(p=e(".nivo-slice",i)._reverse()),p.each((function(){var t=e(this);t.css({bottom:"0px"}),v===n.slices-1?setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}))}),100+d):setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed)}),100+d),d+=50,v++}));else if("sliceUpDown"===r||"sliceUpDownRight"===r||"sliceUpDownLeft"===r){h(i,n,o),d=0,v=0;var w=0;p=e(".nivo-slice",i),"sliceUpDownLeft"===r&&(p=e(".nivo-slice",i)._reverse()),p.each((function(){var t=e(this);0===v?(t.css("top","0px"),v++):(t.css("bottom","0px"),v=0),w===n.slices-1?setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}))}),100+d):setTimeout((function(){t.animate({opacity:"1.0"},n.animSpeed)}),100+d),d+=50,w++}))}else if("fold"===r)h(i,n,o),d=0,v=0,e(".nivo-slice",i).each((function(){var t=e(this),a=t.width();t.css({top:"0px",width:"0px"}),v===n.slices-1?setTimeout((function(){t.animate({width:a,opacity:"1.0"},n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}))}),100+d):setTimeout((function(){t.animate({width:a,opacity:"1.0"},n.animSpeed)}),100+d),d+=50,v++}));else if("fade"===r)h(i,n,o),(f=e(".nivo-slice:first",i)).css({width:i.width()+"px"}),f.animate({opacity:"1.0"},2*n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}));else if("slideInRight"===r)h(i,n,o),(f=e(".nivo-slice:first",i)).css({width:"0px",opacity:"1"}),f.animate({width:i.width()+"px"},2*n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}));else if("slideInLeft"===r)h(i,n,o),(f=e(".nivo-slice:first",i)).css({width:"0px",opacity:"1",left:"",right:"0px"}),f.animate({width:i.width()+"px"},2*n.animSpeed,"",(function(){f.css({left:"0px",right:""}),i.trigger("nivo:animFinished")}));else if("boxRandom"===r)m(i,n,o),g=n.boxCols*n.boxRows,v=0,d=0,(x=u(e(".nivo-box",i))).each((function(){var t=e(this);v===g-1?setTimeout((function(){t.animate({opacity:"1"},n.animSpeed,"",(function(){i.trigger("nivo:animFinished")}))}),100+d):setTimeout((function(){t.animate({opacity:"1"},n.animSpeed)}),100+d),d+=20,v++}));else if("boxRain"===r||"boxRainReverse"===r||"boxRainGrow"===r||"boxRainGrowReverse"===r){m(i,n,o),g=n.boxCols*n.boxRows,v=0,d=0;var b=0,S=0,I=[];I[b]=[],x=e(".nivo-box",i),"boxRainReverse"!==r&&"boxRainGrowReverse"!==r||(x=e(".nivo-box",i)._reverse()),x.each((function(){I[b][S]=e(this),++S===n.boxCols&&(b++,S=0,I[b]=[])}));for(var y=0;y<2*n.boxCols;y++){for(var R=y,N=0;N<n.boxRows;N++)R>=0&&R<n.boxCols&&(function(t,a,o,s,c){var l=e(I[t][a]),d=l.width(),v=l.height();"boxRainGrow"!==r&&"boxRainGrowReverse"!==r||l.width(0).height(0),s===c-1?setTimeout((function(){l.animate({opacity:"1",width:d,height:v},n.animSpeed/1.3,"",(function(){i.trigger("nivo:animFinished")}))}),100+o):setTimeout((function(){l.animate({opacity:"1",width:d,height:v},n.animSpeed/1.3)}),100+o)}(N,R,d,v,g),v++),R--;d+=100}}},u=function(i){for(var t,e,n=i.length;n;t=parseInt(Math.random()*n,10),e=i[--n],i[n]=i[t],i[t]=e);return i},f=function(i){this.console&&void 0!==console.log&&console.log(i)};return this.stop=function(){e(i).data("nivo:vars").stop||(e(i).data("nivo:vars").stop=!0,f("Stop Slider"))},this.start=function(){e(i).data("nivo:vars").stop&&(e(i).data("nivo:vars").stop=!1,f("Start Slider"))},n.afterLoad.call(this),this},e.fn.nivoSlider=function(i){return this.each((function(t,a){var o=e(this);if(o.data("nivoslider"))return o.data("nivoslider");var r=new n(this,i);o.data("nivoslider",r)}))},e.fn.nivoSlider.defaults={effect:"random",slices:15,boxCols:8,boxRows:4,animSpeed:500,pauseTime:3e3,startSlide:0,directionNav:!0,controlNav:!0,controlNavThumbs:!1,pauseOnHover:!0,manualAdvance:!1,prevText:"Prev",nextText:"Next",randomStart:!1,beforeChange:function(){},afterChange:function(){},slideshowEnd:function(){},lastSlide:function(){},afterLoad:function(){}},e.fn._reverse=[].reverse}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[7],{
+
+/***/ "./resources/js/vendor/venobox.min.js":
+/*!********************************************!*\
+  !*** ./resources/js/vendor/venobox.min.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ * VenoBox - jQuery Plugin
+ * version: 1.8.3
+ * @requires jQuery >= 1.7.0
+ *
+ * Examples at http://veno.es/venobox/
+ * License: MIT License
+ * License URI: https://github.com/nicolafranchini/VenoBox/blob/master/LICENSE
+ * Copyright 2013-2017 Nicola Franchini - @nicolafranchini
+ *
+ */
+!function (e) {
+  "use strict";
+
+  var s, i, c, a, o, t, d, l, r, n, v, u, b, k, p, m, h, f, g, x, y, w, C, _, B, P, E, O, D, M, N, U, V, I, z, R, X, Y, j, W, q;
+
+  e.fn.extend({
+    venobox: function venobox($) {
+      var A = this,
+          H = e.extend({
+        arrowsColor: "#B6B6B6",
+        autoplay: !1,
+        bgcolor: "#fff",
+        border: "0",
+        closeBackground: "#161617",
+        closeColor: "#d2d2d2",
+        framewidth: "",
+        frameheight: "",
+        gallItems: !1,
+        infinigall: !1,
+        htmlClose: "&times;",
+        htmlNext: "<span>Next</span>",
+        htmlPrev: "<span>Prev</span>",
+        numeratio: !1,
+        numerationBackground: "#161617",
+        numerationColor: "#d2d2d2",
+        numerationPosition: "top",
+        overlayClose: !0,
+        overlayColor: "rgba(23,23,23,0.85)",
+        spinner: "double-bounce",
+        spinColor: "#d2d2d2",
+        titleattr: "title",
+        titleBackground: "#161617",
+        titleColor: "#d2d2d2",
+        titlePosition: "top",
+        cb_pre_open: function cb_pre_open() {
+          return !0;
+        },
+        cb_post_open: function cb_post_open() {},
+        cb_pre_close: function cb_pre_close() {
+          return !0;
+        },
+        cb_post_close: function cb_post_close() {},
+        cb_post_resize: function cb_post_resize() {},
+        cb_after_nav: function cb_after_nav() {},
+        cb_init: function cb_init() {}
+      }, $);
+      return H.cb_init(A), this.each(function () {
+        if ((D = e(this)).data("venobox")) return !0;
+
+        function $() {
+          y = D.data("gall"), h = D.data("numeratio"), u = D.data("gallItems"), b = D.data("infinigall"), k = u || e('.vbox-item[data-gall="' + y + '"]'), w = k.eq(k.index(D) + 1), C = k.eq(k.index(D) - 1), w.length || !0 !== b || (w = k.eq(0)), k.length > 1 ? (M = k.index(D) + 1, c.html(M + " / " + k.length)) : M = 1, !0 === h ? c.show() : c.hide(), "" !== x ? a.show() : a.hide(), w.length || !0 === b ? (e(".vbox-next").css("display", "block"), _ = !0) : (e(".vbox-next").css("display", "none"), _ = !1), k.index(D) > 0 || !0 === b ? (e(".vbox-prev").css("display", "block"), B = !0) : (e(".vbox-prev").css("display", "none"), B = !1), !0 !== B && !0 !== _ || (d.on(K.DOWN, F), d.on(K.MOVE, G), d.on(K.UP, J));
+        }
+
+        function Q(e) {
+          return !(e.length < 1) && !p && (p = !0, f = e.data("overlay") || e.data("overlaycolor"), n = e.data("framewidth"), v = e.data("frameheight"), o = e.data("border"), i = e.data("bgcolor"), l = e.data("href") || e.attr("href"), s = e.data("autoplay"), x = e.attr(e.data("titleattr")) || "", e === C && d.addClass("animated").addClass("swipe-right"), e === w && d.addClass("animated").addClass("swipe-left"), E.show(), void d.animate({
+            opacity: 0
+          }, 500, function () {
+            g.css("background", f), d.removeClass("animated").removeClass("swipe-left").removeClass("swipe-right").css({
+              "margin-left": 0,
+              "margin-right": 0
+            }), "iframe" == e.data("vbtype") ? ce() : "inline" == e.data("vbtype") ? oe() : "ajax" == e.data("vbtype") ? ie() : "video" == e.data("vbtype") ? ae(s) : (d.html('<img src="' + l + '">'), te()), D = e, $(), p = !1, H.cb_after_nav(D, M, w, C);
+          }));
+        }
+
+        function S(e) {
+          27 === e.keyCode && T(), 37 == e.keyCode && !0 === B && Q(C), 39 == e.keyCode && !0 === _ && Q(w);
+        }
+
+        function T() {
+          if (!1 === H.cb_pre_close(D, M, w, C)) return !1;
+          e("body").off("keydown", S).removeClass("vbox-open"), D.focus(), g.animate({
+            opacity: 0
+          }, 500, function () {
+            g.remove(), p = !1, H.cb_post_close();
+          });
+        }
+
+        A.VBclose = function () {
+          T();
+        }, D.addClass("vbox-item"), D.data("framewidth", H.framewidth), D.data("frameheight", H.frameheight), D.data("border", H.border), D.data("bgcolor", H.bgcolor), D.data("numeratio", H.numeratio), D.data("gallItems", H.gallItems), D.data("infinigall", H.infinigall), D.data("overlaycolor", H.overlayColor), D.data("titleattr", H.titleattr), D.data("venobox", !0), D.on("click", function (u) {
+          if (u.preventDefault(), D = e(this), !1 === H.cb_pre_open(D)) return !1;
+
+          switch (A.VBnext = function () {
+            Q(w);
+          }, A.VBprev = function () {
+            Q(C);
+          }, f = D.data("overlay") || D.data("overlaycolor"), n = D.data("framewidth"), v = D.data("frameheight"), s = D.data("autoplay") || H.autoplay, o = D.data("border"), i = D.data("bgcolor"), _ = !1, B = !1, p = !1, l = D.data("href") || D.attr("href"), r = D.data("css") || "", x = D.attr(D.data("titleattr")) || "", P = '<div class="vbox-preloader">', H.spinner) {
+            case "rotating-plane":
+              P += '<div class="sk-rotating-plane"></div>';
+              break;
+
+            case "double-bounce":
+              P += '<div class="sk-double-bounce"><div class="sk-child sk-double-bounce1"></div><div class="sk-child sk-double-bounce2"></div></div>';
+              break;
+
+            case "wave":
+              P += '<div class="sk-wave"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>';
+              break;
+
+            case "wandering-cubes":
+              P += '<div class="sk-wandering-cubes"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div></div>';
+              break;
+
+            case "spinner-pulse":
+              P += '<div class="sk-spinner sk-spinner-pulse"></div>';
+              break;
+
+            case "chasing-dots":
+              P += '<div class="sk-chasing-dots"><div class="sk-child sk-dot1"></div><div class="sk-child sk-dot2"></div></div>';
+              break;
+
+            case "three-bounce":
+              P += '<div class="sk-three-bounce"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div>';
+              break;
+
+            case "circle":
+              P += '<div class="sk-circle"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div>';
+              break;
+
+            case "cube-grid":
+              P += '<div class="sk-cube-grid"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div>';
+              break;
+
+            case "fading-circle":
+              P += '<div class="sk-fading-circle"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>';
+              break;
+
+            case "folding-cube":
+              P += '<div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>';
+          }
+
+          return P += "</div>", O = '<a class="vbox-next">' + H.htmlNext + '</a><a class="vbox-prev">' + H.htmlPrev + "</a>", U = '<div class="vbox-title"></div><div class="vbox-num">0/0</div><div class="vbox-close">' + H.htmlClose + "</div>", t = '<div class="vbox-overlay ' + r + '" style="background:' + f + '">' + P + '<div class="vbox-container"><div class="vbox-content"></div></div>' + U + O + "</div>", e("body").append(t).addClass("vbox-open"), e(".vbox-preloader div:not(.sk-circle) .sk-child, .vbox-preloader .sk-rotating-plane, .vbox-preloader .sk-rect, .vbox-preloader div:not(.sk-folding-cube) .sk-cube, .vbox-preloader .sk-spinner-pulse").css("background-color", H.spinColor), g = e(".vbox-overlay"), e(".vbox-container"), d = e(".vbox-content"), c = e(".vbox-num"), a = e(".vbox-title"), (E = e(".vbox-preloader")).show(), a.css(H.titlePosition, "-1px"), a.css({
+            color: H.titleColor,
+            "background-color": H.titleBackground
+          }), e(".vbox-close").css({
+            color: H.closeColor,
+            "background-color": H.closeBackground
+          }), e(".vbox-num").css(H.numerationPosition, "-1px"), e(".vbox-num").css({
+            color: H.numerationColor,
+            "background-color": H.numerationBackground
+          }), e(".vbox-next span, .vbox-prev span").css({
+            "border-top-color": H.arrowsColor,
+            "border-right-color": H.arrowsColor
+          }), d.html(""), d.css("opacity", "0"), g.css("opacity", "0"), $(), g.animate({
+            opacity: 1
+          }, 250, function () {
+            "iframe" == D.data("vbtype") ? ce() : "inline" == D.data("vbtype") ? oe() : "ajax" == D.data("vbtype") ? ie() : "video" == D.data("vbtype") ? ae(s) : (d.html('<img src="' + l + '">'), te()), H.cb_post_open(D, M, w, C);
+          }), e("body").keydown(S), e(".vbox-prev").on("click", function () {
+            Q(C);
+          }), e(".vbox-next").on("click", function () {
+            Q(w);
+          }), !1;
+        });
+        var Z = ".vbox-overlay";
+
+        function F(e) {
+          d.addClass("animated"), I = R = e.pageY, z = X = e.pageX, N = !0;
+        }
+
+        function G(e) {
+          if (!0 === N) {
+            X = e.pageX, R = e.pageY, j = X - z, W = R - I;
+            var s = Math.abs(j);
+            s > Math.abs(W) && s <= 100 && (e.preventDefault(), d.css("margin-left", j));
+          }
+        }
+
+        function J(e) {
+          if (!0 === N) {
+            N = !1;
+            var s = D,
+                i = !1;
+            (Y = X - z) < 0 && !0 === _ && (s = w, i = !0), Y > 0 && !0 === B && (s = C, i = !0), Math.abs(Y) >= q && !0 === i ? Q(s) : d.css({
+              "margin-left": 0,
+              "margin-right": 0
+            });
+          }
+        }
+
+        H.overlayClose || (Z = ".vbox-close"), e("body").on("click", Z, function (s) {
+          (e(s.target).is(".vbox-overlay") || e(s.target).is(".vbox-content") || e(s.target).is(".vbox-close") || e(s.target).is(".vbox-preloader")) && T();
+        }), z = 0, X = 0, Y = 0, q = 50, N = !1;
+
+        var K = {
+          DOWN: "touchmousedown",
+          UP: "touchmouseup",
+          MOVE: "touchmousemove"
+        },
+            L = function L(s) {
+          var i;
+
+          switch (s.type) {
+            case "mousedown":
+              i = K.DOWN;
+              break;
+
+            case "mouseup":
+            case "mouseout":
+              i = K.UP;
+              break;
+
+            case "mousemove":
+              i = K.MOVE;
+              break;
+
+            default:
+              return;
+          }
+
+          var c = se(i, s, s.pageX, s.pageY);
+          e(s.target).trigger(c);
+        },
+            ee = function ee(s) {
+          var i;
+
+          switch (s.type) {
+            case "touchstart":
+              i = K.DOWN;
+              break;
+
+            case "touchend":
+              i = K.UP;
+              break;
+
+            case "touchmove":
+              i = K.MOVE;
+              break;
+
+            default:
+              return;
+          }
+
+          var c,
+              a = s.originalEvent.touches[0];
+          c = i == K.UP ? se(i, s, null, null) : se(i, s, a.pageX, a.pageY), e(s.target).trigger(c);
+        },
+            se = function se(s, i, c, a) {
+          return e.Event(s, {
+            pageX: c,
+            pageY: a,
+            originalEvent: i
+          });
+        };
+
+        function ie() {
+          e.ajax({
+            url: l,
+            cache: !1
+          }).done(function (e) {
+            d.html('<div class="vbox-inline">' + e + "</div>"), te();
+          }).fail(function () {
+            d.html('<div class="vbox-inline"><p>Error retrieving contents, please retry</div>'), de();
+          });
+        }
+
+        function ce() {
+          d.html('<iframe class="venoframe" src="' + l + '"></iframe>'), de();
+        }
+
+        function ae(e) {
+          var s,
+              i = function (e) {
+            var s;
+            e.match(/(http:|https:|)\/\/(player.|www.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com))\/(video\/|embed\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/), RegExp.$3.indexOf("youtu") > -1 ? s = "youtube" : RegExp.$3.indexOf("vimeo") > -1 && (s = "vimeo");
+            return {
+              type: s,
+              id: RegExp.$6
+            };
+          }(l),
+              c = (e ? "?rel=0&autoplay=1" : "?rel=0") + function (e) {
+            var s = "",
+                i = decodeURIComponent(e).split("?");
+
+            if (void 0 !== i[1]) {
+              var c,
+                  a,
+                  o = i[1].split("&");
+
+              for (a = 0; a < o.length; a++) {
+                c = o[a].split("="), s = s + "&" + c[0] + "=" + c[1];
+              }
+            }
+
+            return encodeURI(s);
+          }(l);
+
+          "vimeo" == i.type ? s = "https://player.vimeo.com/video/" : "youtube" == i.type && (s = "https://www.youtube.com/embed/"), d.html('<iframe class="venoframe vbvid" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" src="' + s + i.id + c + '"></iframe>'), de();
+        }
+
+        function oe() {
+          d.html('<div class="vbox-inline">' + e(l).html() + "</div>"), de();
+        }
+
+        function te() {
+          (V = d.find("img")).length ? V.each(function () {
+            e(this).one("load", function () {
+              de();
+            });
+          }) : de();
+        }
+
+        function de() {
+          a.html(x), d.find(">:first-child").addClass("figlio").css({
+            width: n,
+            height: v,
+            padding: o,
+            background: i
+          }), e("img.figlio").on("dragstart", function (e) {
+            e.preventDefault();
+          }), le(), d.animate({
+            opacity: "1"
+          }, "slow", function () {
+            E.hide();
+          });
+        }
+
+        function le() {
+          var s = d.outerHeight(),
+              i = e(window).height();
+          m = s + 60 < i ? (i - s) / 2 : "30px", d.css("margin-top", m), d.css("margin-bottom", m), H.cb_post_resize();
+        }
+
+        "ontouchstart" in window ? (e(document).on("touchstart", ee), e(document).on("touchmove", ee), e(document).on("touchend", ee)) : (e(document).on("mousedown", L), e(document).on("mouseup", L), e(document).on("mouseout", L), e(document).on("mousemove", L)), e(window).resize(function () {
+          e(".vbox-content").length && setTimeout(le(), 800);
+        });
+      });
+    }
+  });
+}(jQuery);
+
+/***/ })
+
+}]);
