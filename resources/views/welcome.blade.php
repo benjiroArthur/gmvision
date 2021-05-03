@@ -286,6 +286,82 @@
             </div>
         </div>
     </section><!-- /Causes Section -->
+    <section class="causes-section bg-grey bd-bottom padding">
+        <div class="container">
+            <div class="causes-wrap row justify-content-center">
+                <div class="col-md-4 xs-padding">
+                    <div class="causes-content">
+                        <div class="causes-thumb">
+                            <div id="carouselOneControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-1.jpg')}}" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-2.jpg')}}" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="{{asset('img/Courses/maternal/causes-1-3.jpg')}}" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselOneControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselOneControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">25%</span></div>
+                            </div>
+                        </div>
+                        <div class="causes-details">
+                            <h3>Mothers Home And Educational Complex.</h3>
+                            <p>
+                                Fund Raising to build an ultra modern orphanage facility to serve as Home and Formal School
+                                for Ghanaians.
+                            </p>
+                            <p>
+                                Location: Mampong in the Western Region
+                            </p>
+                            <p>
+
+                            </p>
+
+                            <div class="donation-box">
+                                {{--<p><i class="ti-bar-chart"></i>Goal: $450000</p>--}}
+                                {{--<p><i class="ti-thumb-up"></i>Raised: $55000</p>--}}
+                            </div>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#gmModal">Read More</a>
+                        </div>
+                    </div>
+                </div><!-- /Causes-1 -->
+            </div>
+        </div>
+    </section><!-- /Causes Section -->
+    <section>
+        <div class="section-heading text-center mb-40">
+            <h2>Popular Videos</h2>
+            <span class="heading-border"></span>
+        </div><!-- /Section Heading -->
+        <div class="row justify-content-center py-4">
+            @forelse($activity_videos as $activity_video)
+            <div class="col-md-4">
+                <h5 class="text-center">{{$activity_video->title}}</h5>
+                {!! $activity_video->video_html !!}
+            </div>
+            @empty
+                <div class="col-md-12">
+                    <h2 class="text-center">No Videos Available</h2>
+                </div>
+            @endforelse
+        </div>
+        <div class="pb-2" style="border-bottom: 2px solid rgba(11,26,248,0.27)"></div>
+    </section><!-- /event videos -->
+
     <section>
         <div class="section-heading text-center mb-40">
             <h2>Happy International Women's Day</h2>

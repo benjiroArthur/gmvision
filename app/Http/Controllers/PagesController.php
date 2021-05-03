@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ActivityVideo;
 use Illuminate\Http\Request;
 use App\Models\Project;
 
@@ -14,7 +15,8 @@ class PagesController extends Controller
      */
     public function welcome()
     {
-        return view('welcome');
+        $activity_videos = ActivityVideo::latest()->get();
+        return view('welcome')->with('activity_videos', $activity_videos);
     }
 
     /**
