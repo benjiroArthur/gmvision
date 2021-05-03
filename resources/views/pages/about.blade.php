@@ -8,11 +8,6 @@
         <div class="container">
             <div class="page-content">
                 <h2>About Us</h2>
-                {{--<p style="color: black">Lorem Ipsum is simply text of the industry. </p>--}}
-                {{--<ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                    <li class="breadcrumb-item active">About Us</li>
-                </ol>--}}
             </div>
         </div>
     </div><!-- /Page Header -->
@@ -44,7 +39,6 @@
             <div class="section-heading text-center mb-40">
                 <h2>Meet Out Volunteers</h2>
                 <span class="heading-border"></span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> It has survived not only five centuries.</p>
             </div><!-- /Section Heading -->
             <div class="team-wrapper row">
                 <div class="col-lg-6 sm-padding">
