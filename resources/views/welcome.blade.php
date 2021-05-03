@@ -403,9 +403,9 @@
                 {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> It has survived not only five centuries.</p>--}}
             </div><!-- /Section Heading -->
             <div class="team-wrapper row">
-                <div class="col-lg-6 sm-padding">
+                <div class="col-md-9 sm-padding">
                     <div class="team-wrap row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="team-details">
                                 <img src="{{asset('img/volunteers/emma.jpg')}}" alt="team">
                                 <div class="hover">
@@ -414,7 +414,7 @@
                                 </div>
                             </div>
                         </div><!-- /Team-1 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="team-details">
                                 <img src="{{asset('img/volunteers/pat.jpg')}}" alt="team">
                                 <div class="hover">
@@ -423,7 +423,7 @@
                                 </div>
                             </div>
                         </div><!-- /Team-2 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="team-details">
                                 <img src="{{asset('img/volunteers/steve.jpg')}}" alt="team">
                                 <div class="hover">
@@ -432,7 +432,7 @@
                                 </div>
                             </div>
                         </div><!-- /Team-3 -->
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="team-details">
                                 <img src="{{asset('img/volunteers/rebecca.jpg')}}" alt="team">
                                 <div class="hover">
@@ -441,9 +441,27 @@
                                 </div>
                             </div>
                         </div><!-- /Team-4 -->
+                        <div class="col-md-4">
+                            <div class="team-details">
+                                <img src="{{asset('img/volunteers/ernestina.jpg')}}" alt="team">
+                                <div class="hover">
+                                    <h3>Ernestina Frimpomaa Amoako</h3>
+                                    <small class="text-white">Gender Front Desk Officer</small>
+                                </div>
+                            </div>
+                        </div><!-- /Team-5 -->
+                        <div class="col-md-4">
+                            <div class="team-details">
+                                <img src="{{asset('img/volunteers/yeboah.jpg')}}" alt="team">
+                                <div class="hover">
+                                    <h3>Richard Kwaku Yeboah</h3>
+                                    <small class="text-white">Procurement & Supply Manager</small>
+                                </div>
+                            </div>
+                        </div><!-- /Team-6 -->
                     </div>
                 </div>
-                <div class="col-lg-6 sm-padding">
+                <div class="col-md-3 sm-padding">
                     <div class="team-content">
                         <h2>Become a Volunteer?</h2>
                         <h3>Join your hand with us for a better life and beautiful future.</h3>
