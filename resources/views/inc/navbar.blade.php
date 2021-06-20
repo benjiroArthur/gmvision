@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-sm-4 d-none d-md-block">
                     <ul class="right-info">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/gmvint/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
@@ -63,8 +63,8 @@
                     @auth()
                     <li><a class="nav-link"  style="color: {{ $routeName === 'home' ? '#0b1af8' : '' }}" href="{{url('/home')}}">Dashboard</a></li>
                     @endauth
-                    <li><a class="nav-link"  style="color: {{ $routeName === 'welcome' ? '#0b1af8' : '' }}" href="{{url('/')}}">Home</a></li>
-                    <li><a class="nav-link"  style="color: {{ $routeName === 'about' ? '#0b1af8' : '' }}" href="{{url('/about')}}">About</a></li>
+                    <li><a class="nav-link"  style="color: {{ $routeName === 'welcome' ? '#0b1af8' : '' }}" href="{{route('welcome')}}">Home</a></li>
+                    <li><a class="nav-link"  style="color: {{ $routeName === 'about' ? '#0b1af8' : '' }}" href="{{route('about')}}">About</a></li>
 {{--
                     <li><a class="nav-link"  style="color: {{ $routeName === 'event' ? '#0b1af8' : '' }}" href="{{url('/event')}}">Event</a></li>
 --}}
@@ -72,7 +72,7 @@
                     <li><a class="nav-link"  style="color: {{ $routeName === 'contact' ? '#0b1af8' : '' }}" href="{{url('/contact')}}">Contact</a></li>--}}
                         @auth()
                             <li>
-                                <a class="nav-link" href="" onclick="event.preventDefault();
+                                <a class="nav-link" href="" onclick="preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     Logout</a>
 
@@ -81,7 +81,7 @@
                                 </form>
                         @endauth
                 </ul>
-                <a href="{{url('/payment')}}" class="default-btn" style="text-decoration: none">Donate Now</a>
+                <a href="{{url('/payment')}}" class="btn btn-primary text-white" style="text-decoration: none">Donate Now</a>
             </div>
         </nav>
     </div>

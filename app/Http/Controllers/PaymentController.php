@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donation;
 use App\Models\Donor;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -92,5 +93,15 @@ class PaymentController extends Controller
         // Now you have the payment details,
         // you can store the authorization_code in your db to allow for recurrent subscriptions
         // you can then redirect or do whatever you want
+    }
+
+    public function getDonationInfo(){
+        $donors = Donor::all()->count();
+        $donationAmount = Donation::all()->sum('amount');
+        $data = [
+            'donors' => $donors,
+            'donationAmount' => $donationAmount
+        ];
+        return response()->json($data);
     }
 }

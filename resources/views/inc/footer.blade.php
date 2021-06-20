@@ -9,7 +9,7 @@
                         We are raising funds to support school building blocks and provision of
                         educational materials in the Rural and Deprived communities in the country.</p>
                     <ul class="social-icon">
-                        <li><a href="#"><i class="fa fa-facebook" style="color: white;"></i></a></li>
+                        <li><a href="https://www.facebook.com/gmvint/" target="_blank"><i class="fa fa-facebook" style="color: white;"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" style="color: white;"></i></a></li>
                         <li><a href="#"><i class="fa fa-pinterest" style="color: white;"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram" style="color: white;"></i></a></li>
@@ -51,7 +51,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 sm-padding">
-                <div class="copyright">&copy; 2018 Golden Mothers Vision International</div>
+                <div class="copyright">&copy; {{date('Y')}} Golden Mothers Vision International</div>
             </div>
             <div class="col-md-6 sm-padding text-right">
                 <div class="copyright">Powered by Benjiro | +233 241 842 651</div>

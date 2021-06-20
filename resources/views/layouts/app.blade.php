@@ -25,12 +25,14 @@
 </head>
 <body>
     <div id="app">
-        @include('inc.navbar')
-        <div class="container-fluid">
-            @include('inc.messages')
-            @yield('content')
-        </div>
-        @include('inc.footer')
+        <v-app>
+            @include('inc.navbar')
+            <div class="container-fluid">
+                @include('inc.messages')
+                @yield('content')
+            </div>
+            @include('inc.footer')
+        </v-app>
     </div>
     <script>
         $(document).ready(function(){

@@ -17,4 +17,14 @@ class Donation extends Model
     public function project() {
         return $this->belongsTo(Project::class);
     }
+
+    public function getAmountAttribute($value) {
+        $value /= 100;
+        return round($value, 2);
+    }
+
+    public function getBalanceAttribute($value) {
+        $value /= 100;
+        return round($value, 2);
+    }
 }

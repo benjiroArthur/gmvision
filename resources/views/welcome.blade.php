@@ -19,8 +19,8 @@
                                 <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
                                 <h1 class="wow cssanimation leFadeInRight sequence">Better Life for People</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
-                                <a href="{{url('/payment')}}" class="default-btn no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Donate Now</a>
+                                <a href="#" class="btn btn-primary text-white no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="btn btn-primary text-white no-under wow cssanimation fadeInBottom" data-wow-delay="0.8s" style="text-decoration: none">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
                             <div class="slider-text">
                                 <h1 class="wow cssanimation fadeInTop" data-wow-delay="1s" data-wow-duration="800ms">Together we  <br>can make a Difference</h1>
                                 <p class="wow cssanimation fadeInBottom" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
-                                <a href="{{url('/payment')}}" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
+                                <a href="#" class="btn btn-primary text-white wow cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="btn btn-primary text-white wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,8 @@
                                 <h5 class="wow cssanimation fadeInBottom">Join Us Today</h5>
                                 <h1 class="wow cssanimation lePushReleaseFrom sequence" data-wow-delay="1s">Give a little. Change a lot.</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Help today because tomorrow you may be the one who needs helping! <br>Forget what you can get and see what you can give.</p>
-                                <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
-                                <a href="{{url('/payment')}}" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donet Now</a>
+                                <a href="#" class="btn btn-primary text-white cssanimation fadeInBottom" data-wow-delay="0.8s" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                                <a href="{{url('/payment')}}" class="btn btn-primary text-white wow cssanimation fadeInBottom" data-wow-delay="0.8s">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -196,52 +196,69 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Face Of Maternal Health.</h3>
+                            <h3>Mothers Home And Educational Complex.</h3>
                             <p>
-                                Maternal and Child Mortality is one of the biggest and challenging problems we face as a Nation.<br><br>
+                                Fund Raising to build an ultra modern orphanage facility to serve as Home and Formal School
+                                for Ghanaians.
+                            </p>
+                            <p>
+                                Location: Mampong in the Western Region
+                            </p>
+                            <p>
+
                             </p>
 
                             <div class="donation-box">
                                 {{--<p><i class="ti-bar-chart"></i>Goal: $450000</p>--}}
                                 {{--<p><i class="ti-thumb-up"></i>Raised: $55000</p>--}}
                             </div>
-                            <a href="#" class="read-more" data-toggle="modal" data-target="#gmModal">Read More</a>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#mothersHomeModal">Read More</a>
                         </div>
                     </div>
                 </div><!-- /Causes-1 -->
                 <div class="col-md-4 xs-padding">
                     <div class="causes-content">
                         <div class="causes-thumb">
-                            <div id="carouseltwoControls" class="carousel slide" data-ride="carousel">
+                            <div id="teenageCarousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="{{asset('img/causes-2-1.jpg')}}" alt="First slide">
+                                        <img class="d-block w-100" src="{{asset('img/teenage/teenage-one.jpg')}}" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="{{asset('img/causes-2-2.jpg')}}" alt="Second slide">
+                                        <img class="d-block w-100" src="{{asset('img/teenage/teenage-two.jpg')}}" alt="Second slide">
                                     </div>
-                                    {{--<div class="carousel-item">
-                                    <img class="d-block w-100" src="{{asset('img/causes-2.jpg')}}" alt="Third slide">
-                                    </div>--}}
                                 </div>
-                                <a class="carousel-control-prev" href="#carouseltwoControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#teenageCarousel" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouseltwoControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#teenageCarousel" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only dot">Next</span>
+                                    <span class="sr-only">Next</span>
                                 </a>
                             </div>
                             <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">45%</span></div>
+                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">25%</span></div>
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Face Of Mother Ghana.</h3>
-                            <p>As part of our vision to bring health to every child, woman and youth, we are embarking on a 3-day campaign on sanitation.</p>
-                            <a href="#" class="read-more" data-toggle="modal" data-target="#mgModal">Read More</a>
+                            <h3>Addressing The Rise Of Teenage Pregnancy</h3>
+                            <p>
+                                Teenage pregnancy is an emerging global issue that affects sustainable development.
+                            </p>
+                            <p>
+                                On the 4th of June ,2021, Golden Mothers Vision International organised a program about the rise...
+                            </p>
+                            <p>
+
+                            </p>
+
+                            <div class="donation-box">
+                                {{--<p><i class="ti-bar-chart"></i>Goal: $450000</p>--}}
+                                {{--<p><i class="ti-thumb-up"></i>Raised: $55000</p>--}}
+                            </div>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#teenageModal">Read More</a>
                         </div>
                     </div>
                 </div><!-- /Causes-2 -->
@@ -319,16 +336,9 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Mothers Home And Educational Complex.</h3>
+                            <h3>Face Of Maternal Health.</h3>
                             <p>
-                                Fund Raising to build an ultra modern orphanage facility to serve as Home and Formal School
-                                for Ghanaians.
-                            </p>
-                            <p>
-                                Location: Mampong in the Western Region
-                            </p>
-                            <p>
-
+                                Maternal and Child Mortality is one of the biggest and challenging problems we face as a Nation.<br><br>
                             </p>
 
                             <div class="donation-box">
@@ -339,6 +349,42 @@
                         </div>
                     </div>
                 </div><!-- /Causes-1 -->
+                <div class="col-md-4 xs-padding">
+                    <div class="causes-content">
+                        <div class="causes-thumb">
+                            <div id="carouseltwoControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="{{asset('img/causes-2-1.jpg')}}" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="{{asset('img/causes-2-2.jpg')}}" alt="Second slide">
+                                    </div>
+                                    {{--<div class="carousel-item">
+                                    <img class="d-block w-100" src="{{asset('img/causes-2.jpg')}}" alt="Third slide">
+                                    </div>--}}
+                                </div>
+                                <a class="carousel-control-prev" href="#carouseltwoControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouseltwoControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only dot">Next</span>
+                                </a>
+                            </div>
+                            <a href="{{url('/payment')}}" class="donate-btn">Donate Now<i class="ti-plus"></i></a>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="wow cssanimation fadeInLeft">45%</span></div>
+                            </div>
+                        </div>
+                        <div class="causes-details">
+                            <h3>Face Of Mother Ghana.</h3>
+                            <p>As part of our vision to bring health to every child, woman and youth, we are embarking on a 3-day campaign on sanitation.</p>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#mgModal">Read More</a>
+                        </div>
+                    </div>
+                </div><!-- /Causes-2 -->
             </div>
         </div>
     </section><!-- /Causes Section -->
@@ -349,7 +395,7 @@
         </div><!-- /Section Heading -->
         <div class="row justify-content-center py-4">
             @forelse($activity_videos as $activity_video)
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
                 <h5 class="text-center">{{$activity_video->title}}</h5>
                 {!! $activity_video->video_html !!}
             </div>
@@ -456,7 +502,7 @@
                         {{--<h3><i class="ti-bar-chart"></i>Goal: $450000</h3>--}}
                         {{--<h3><i class="ti-thumb-up"></i>Raised: $55000</h3>--}}
                         {{--</div>--}}
-                        <a href="{{url('/payment')}}" class="default-btn">Donate Now</a>
+                        <a href="{{url('/payment')}}" class="btn btn-primary text-white">Donate Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 xs-padding">
@@ -550,7 +596,7 @@
                             <li><i class="fa fa-check"></i>You decide which Region you volunteer in.</li>
                             <li><i class="fa fa-check"></i>Joining is totally free. We don't need any money from you.</li>
                         </ul>
-                        <a href="#" class="default-btn" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
+                        <a href="#" class="btn btn-primary text-white" data-toggle="modal" data-target="#volunteerModal">Join With Us</a>
                     </div>
                 </div>
             </div>
@@ -645,42 +691,70 @@
             </div>
         </div>
     </div>
+    <div class="modal" tabindex="-1" role="dialog" id="mothersHomeModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center">Mothers Home And Educational Complex.</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>
+                        Fund Raising to build an ultra modern orphanage facility to serve as Home and Formal School
+                        for Ghanaians.
+                    </p>
+                    <p>
+                        For more information please contact: 0247719755.<br>
+                        To sponsor our project please <a href="{{url('/payment')}}">click here</a>.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="teenageModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center">Addressing The Rise Of Teenage Pregnancy.</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-justify">
+                    <p>
+                        Teenage pregnancy is an emerging global issue that affects sustainable development.
+                    </p>
+                    <p>
+                        On the 4th of June ,2021, Golden Mothers Vision International
+                        organised a program about the rise of teenage pregnancy which took
+                        place at Emmanuel Methodist International School located at Oduom-Kumasi
+                        in the Ashanti Region. The program was purposely organised for the Junior
+                        High School Three (3) students notifying them about teenage pregnancy,
+                        it's effects and prevention.  We have undertaken to assess the work directed at
+                        reducing unplanned teenage pregnancy, and to look at what else can be done to
+                        support young people at risk of teenage pregnancy or early parenting.
+                    </p>
+                    <p>Madam Priscilla Sarpong (JHS Teacher) who spoke with the students said;  a teenager or a young girl getting pregnant won't be able to achieve her goal or aim and may result to school dropout . So abstainance is the best.</p>
+                    <p>Richard Kwaku Yeboah (Procurement Officer) also added , "a mother is one to whom you hurry when you are troubled ". Unmarried pregnant adolescent will face stigma, rejection and disgrace from parents and peers as well as threats of violence. Girls who become pregnant before age
+                        18 are also more likely to experience violence within a marriage or partnership.</p>
+                    <p>However, Miss Grace Pokuaa (Delegate from Oforikrom Municipal Assembly) also stated the complications relating to teenage pregnancy and childbirth and how is leading to death for girls aged 15-19 globally. </p>
+                    <p>Ernestina Amoako (Gender Front Desk Officer) concluded by advising the young boys about the rate of approaching the ladies with intent of engaging in sexual intercourse with them. </p>
+                    <p>Further more encouraged programs aimed at reducing the high rate of teenage pregnancy included on the time table of the school tackling abstinence/prevention, providing more of education about birth control and teaching skills to cope with peer pressure.</p>
+                    <p><strong>Richard Kwaku Yeboah and Ernestina Amoako</strong></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     {{--All Modals End Here--}}
 
     <section id="counter" class="counter-section">
-        <div class="container">
-            <ul class="row counters">
-                <li class="col-md-3 col-sm-6 sm-padding">
-                    <div class="counter-content">
-                        <i class="ti-money"></i>
-                        <h3 class="counter">85389</h3>
-                        <h4 class="text-white">Money Donated</h4>
-                    </div>
-                </li>
-                <li class="col-md-3 col-sm-6 sm-padding">
-                    <div class="counter-content">
-                        <i class="ti-face-smile"></i>
-                        <h3 class="counter">10693</h3>
-                        <h4 class="text-white">Volunteer Around The World</h4>
-                    </div>
-                </li>
-                <li class="col-md-3 col-sm-6 sm-padding">
-                    <div class="counter-content">
-                        <i class="ti-user"></i>
-                        <h3 class="counter">50177</h3>
-                        <h4 class="text-white">People Impacted</h4>
-                    </div>
-                </li>
-                <li class="col-md-3 col-sm-6 sm-padding">
-                    <div class="counter-content">
-                        <i class="ti-comments"></i>
-                        <h3 class="counter">669</h3>
-                        <h4 class="text-white">Positive Feedbacks</h4>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <donation-course></donation-course>
     </section><!-- Counter Section -->
 
     {{--<section class="events-section bg-grey bd-bottom padding">
