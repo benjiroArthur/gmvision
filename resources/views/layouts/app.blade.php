@@ -25,14 +25,6 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< Updated upstream
-        @include('inc.navbar')
-        <div class="container-fluid">
-            @include('inc.messages')
-            @yield('content')
-        </div>
-        @include('inc.footer')
-=======
         <v-app>
             @include('inc.navbar')
             <div class="container-fluid pt-16 mt-16">
@@ -41,7 +33,6 @@
             </div>
             @include('inc.footer')
         </v-app>
->>>>>>> Stashed changes
     </div>
     <script>
         $(document).ready(function(){

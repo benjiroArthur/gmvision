@@ -1,7 +1,13 @@
 <template>
-<div>
-    <v-card>
-    <v-toolbar>
+<div class="pt-15">
+    <v-card min-height="400">
+        <v-toolbar
+            color="primary"
+            dark
+            flat
+        >
+            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
             <v-toolbar-title>Dashboard</v-toolbar-title>
 
             <v-spacer></v-spacer>
@@ -31,7 +37,7 @@
             </template>
         </v-toolbar>
 
-    <v-tabs-items v-model="tab">
+        <v-tabs-items v-model="tab">
             <v-tab-item
             >
                 <v-card flat>
@@ -75,6 +81,7 @@
 </template>
 
 <script>
+    import UploadVideoActivity from './Sections/UploadVideoActivity'
     export default {
         name: "DashboardComponent",
         components: {UploadVideoActivity},

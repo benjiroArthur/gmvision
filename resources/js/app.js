@@ -6,9 +6,17 @@
 
 require('./bootstrap');
 
+import vuetify from "./plugins/vuetify";
 window.Vue = require('vue');
-import Vuetify from 'vuetify';
-Vue.use(Vuetify);
+Vue.use(vuetify);
+
+
+import {
+    Form,
+} from 'vform';
+
+window.Form = Form;
+window.Fire = new Vue();
 
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
@@ -31,6 +39,7 @@ Vue.component('event-component', require('./components/EventsComponent.vue').def
 Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
 Vue.component('dash-component', require('./components/DashboardComponent.vue').default);
 Vue.component('about-ceo', require('./components/AboutCeo.vue').default);
+Vue.component('donation-course', require('./components/Sections/DonationCourse').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,5 +49,5 @@ Vue.component('about-ceo', require('./components/AboutCeo.vue').default);
 
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify()
+    vuetify: vuetify
 });
