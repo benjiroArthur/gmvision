@@ -105,11 +105,13 @@
   =========================================================================*/
 
   /*$('.gallery-items').imagesLoaded( function() {
-  		 // Add isotope click function
+  
+  	 // Add isotope click function
   	$('.gallery-filter li').on( 'click', function(){
           $(".gallery-filter li").removeClass("active");
           $(this).addClass("active");
-  	        var selector = $(this).attr('data-filter');
+  
+          var selector = $(this).attr('data-filter');
           $(".gallery-items").isotope({
               filter: selector,
               animationOptions: {
@@ -120,7 +122,8 @@
           });
           return false;
       });
-  	    $(".gallery-items").isotope({
+  
+      $(".gallery-items").isotope({
           itemSelector: '.single-item',
           layoutMode: 'masonry',
       });

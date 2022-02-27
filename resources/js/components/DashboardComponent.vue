@@ -1,8 +1,7 @@
 <template>
 <div>
-
-<<<<<<< Updated upstream
-=======
+    <v-card>
+    <v-toolbar>
             <v-toolbar-title>Dashboard</v-toolbar-title>
 
             <v-spacer></v-spacer>
@@ -32,7 +31,7 @@
             </template>
         </v-toolbar>
 
-        <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="tab">
             <v-tab-item
             >
                 <v-card flat>
@@ -72,16 +71,12 @@
             </v-tab-item>
         </v-tabs-items>
     </v-card>
->>>>>>> Stashed changes
 </div>
 </template>
 
 <script>
     export default {
         name: "DashboardComponent",
-<<<<<<< Updated upstream
-        data () {},
-=======
         components: {UploadVideoActivity},
         data () {
             return {
@@ -122,7 +117,6 @@
                 })
             }
         },
->>>>>>> Stashed changes
         mounted() {
         },
         created() {

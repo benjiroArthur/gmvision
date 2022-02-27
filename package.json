@@ -24,12 +24,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-<<<<<<< Updated upstream
-=======
         "chart.js": "2",
         "vform": "^2.0.4",
         "vue-chartkick": "0.6.1",
->>>>>>> Stashed changes
         "vue-stack-grid": "^1.2.2",
         "vuetify": "^2.4.5"
     }
