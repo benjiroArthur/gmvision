@@ -4,7 +4,7 @@
 @section('content')
 
 
-    <div class="pager-header">
+    <div class="pager-header pt-5">
         <div class="container">
             <div class="page-content">
                 <h2>About Us</h2>

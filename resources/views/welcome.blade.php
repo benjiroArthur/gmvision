@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <section class="slider-section">
+    <section class="slider-section pt-5 mt-5">
         <div class="slider-wrapper">
             <div id="main-slider" class="nivoSlider">
                 <img src="{{asset('img/slider-1.jpg')}}" alt="" title="#slider-caption-1"/>

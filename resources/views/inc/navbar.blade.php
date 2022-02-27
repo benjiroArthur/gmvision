@@ -61,7 +61,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul id="mainmenu" class="nav navbar-nav nav-menu ml-auto mr-auto">
                     @auth()
-                    <li><a class="nav-link"  style="color: {{ $routeName === 'home' ? '#0b1af8' : '' }}" href="{{url('/home')}}">Dashboard</a></li>
+                    <li><a class="nav-link"  style="color: {{ $routeName === 'home' ? '#0b1af8' : '' }}" href="{{route('home')}}">Dashboard</a></li>
                     @endauth
                     <li><a class="nav-link"  style="color: {{ $routeName === 'welcome' ? '#0b1af8' : '' }}" href="{{url('/')}}">Home</a></li>
                     <li><a class="nav-link"  style="color: {{ $routeName === 'about' ? '#0b1af8' : '' }}" href="{{url('/about')}}">About</a></li>

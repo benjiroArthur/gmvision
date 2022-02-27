@@ -27,7 +27,6 @@ class PaymentController extends Controller
             'phone' => 'required',
             'amount' => 'required',
             'project_id' => 'required',
-            'pay_type' => 'required',
             'email' => 'required|email'
         ]);
         $paystack = new Paystack();

@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
-
 @section('content')
-<br><br><br>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pt-5">
         <div class="col-md-6">
             <form novalidate class="form-control form-style text-center needs-validation" action="{{url('/pay')}}" method="post" id="payment-form">
                 {{ csrf_field() }}
@@ -67,14 +65,14 @@
                         @endforelse
                     </select>
                 </div>
-                <div class="form-group">
+                {{--<div class="form-group">
                     <button id="one-button" class="btn btn-primary mx-3" type="button" onclick="isChecked('one')">One Time</button>
                     <button id="monthly-button" class="btn btn-outline-primary mx-3" type="button" onclick="isChecked('monthly')">Monthly</button>
                     <input id="one-radio" type="radio" class="form-control-radio" name="pay_type" value="one" checked hidden>
                     <input id="monthly-radio" type="radio" class="form-control-radio" name="pay_type" value="monthly" hidden>
-                </div>
+                </div>--}}
 
-                <button type="submit" class="btn btn-primary" >Proceed To Make Payment</button>
+                <button type="submit" class="btn btn-primary text-white" >Proceed To Make Payment</button>
                 <p><small>Please note that you will be redirected to a trusted and secured payment platform (Paystack) to make the payment</small></p>
             </form>
         </div>
