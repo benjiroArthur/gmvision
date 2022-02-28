@@ -55,7 +55,10 @@
             <v-tab-item
             >
                 <v-card flat>
-                    <div class="row">
+                    <div class="row pt-2">
+                        <div class="col-md-12 justify-content-end d-flex py-2">
+                            <v-btn @click="getStatistics" color="primary">Update Records</v-btn>
+                        </div>
                         <div class="col-md-12 py-3">
                             <v-card-title class="text-center justify-content-center">
                                 Daily Visitors Statistics
