@@ -388,6 +388,27 @@
             </div>
         </div>
     </section><!-- /Causes Section -->
+
+    <section class="causes-section bg-white bd-bottom padding">
+        <h2 class="text-center">Nurses Recruitment!!!</h2>
+        <span class="heading-border"></span>
+        <div class="container">
+            <div class="causes-wrap row justify-content-center">
+                <div class="col-md-6 xs-padding">
+                    <img class="d-block w-100" src="{{asset('img/nurses/nurse-poster.jpg')}}" alt="Banner">
+                </div><!-- /Nurse Banner-1 -->
+                <div class="col-md-6 xs-padding">
+                    <p><strong>Golden Mothers Vision International is looking for Nurses to work in the USA</strong></p>
+                    <p>Are you a qualified nurse?</p>
+                    <p>Are you ready to work in the USA?</p>
+                    <p>If yes to the above questions, kindly send your CV and transcript to conwaac@gmail.com</p>
+                    <p>Registration Fee: <strong>GH¢ 500.00</strong></p>
+                    <p>Processing Fee: <strong>US$ 3900.00</strong></p>
+                    <p><strong>For more information contact: 0247719755</strong></p>
+                </div><!-- /Nurse Content-2 -->
+            </div>
+        </div>
+    </section><!-- /Nurses Section -->
     <section>
         <div class="section-heading text-center mb-40">
             <h2>Popular Videos</h2>
@@ -408,7 +429,8 @@
         <div class="pb-2" style="border-bottom: 2px solid rgba(11,26,248,0.27)"></div>
     </section><!-- /event videos -->
 
-    <section>
+    <!-- /international women's day start -->
+<!--    <section>
         <div class="section-heading text-center mb-40">
             <h2>Happy International Women's Day</h2>
             <span class="heading-border"></span>
@@ -427,7 +449,7 @@
                 </p>
                 <p><strong>To God be the Glory for Creating WOMEN.</strong></p>
             </div>
-        </div><!-- /Section Heading -->
+        </div>&lt;!&ndash; /Section Heading &ndash;&gt;
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <img class="d-block w-100" src="{{asset('img/int_women/aggrey.jpg')}}" alt="Second slide">
@@ -439,7 +461,44 @@
                 <img class="d-block w-100" src="{{asset('img/int_women/mariama.jpg')}}" alt="Third slide">
             </div>
         </div>
-    </section><!-- /international women's day -->
+    </section>-->
+    <!-- /international women's day end -->
+
+    <!-- /Soap making start -->
+    <section>
+        <div class="section-heading text-center mb-40">
+            <h2>Women Fellowships & JHS Schools In Soap Making</h2>
+            <span class="heading-border"></span>
+            <div class="container">
+                <p>Golden Mothers Vision International seeks to empower Women Fellowship Groups and JHS School Children
+                    with the skills and knowledge in Soap Making,
+                    We therefore seek <strong>Support in the form of Donations</strong> to help make this dream a reality </p>
+                <p>
+                    <strong>To Empower your Women Fellowship and Schools, Please Contact 0247719755</strong>
+                </p>
+<!--                <p>
+                    Great respect to all the men who have stood behind their women to be where they are now. As we celebrate our day, we also do appreciate your presence in our lives.
+                </p>
+                <p><strong>To God be the Glory for Creating WOMEN.</strong></p>-->
+            </div>
+        </div> <!--/Section Heading -->
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <img class="d-block w-100" src="{{asset('img/soap_making/soap-making-banner-web.jpg')}}" alt="Second slide">
+            </div>
+            <div class="col-md-12 my-3 py-3">
+            <!-- Images Of Soap making -->
+                <images-dialog-component folder-name="img/soap_making/all-images"></images-dialog-component>
+            </div>
+<!--            <div class="col-md-4">
+                <img class="d-block w-100" src="{{asset('img/int_women/card.jpg')}}" alt="Fourth slide">
+            </div>
+            <div class="col-md-4">
+                <img class="d-block w-100" src="{{asset('img/int_women/mariama.jpg')}}" alt="Third slide">
+            </div>-->
+        </div>
+    </section>
+    <!-- /Soap making end -->
 
     <section class="about-section bd-bottom shape circle padding">
         <div class="container">
@@ -574,10 +633,10 @@
                         </div><!-- /Team-5 -->
                         <div class="col-md-4">
                             <div class="team-details">
-                                <img src="{{asset('img/volunteers/yeboah.jpg')}}" alt="team">
+                                <img src="{{asset('img/volunteers/ben.jpg')}}" alt="team">
                                 <div class="hover">
-                                    <h3>Richard Kwaku Yeboah</h3>
-                                    <small class="text-white">Procurement & Supply Manager</small>
+                                    <h3>Benjamin Arthur</h3>
+                                    <small class="text-white">Information Technology Expert</small>
                                 </div>
                             </div>
                         </div><!-- /Team-6 -->

@@ -2,7 +2,7 @@
     <div style="height: 300px; overflow-y: auto">
        <div>
            <p>
-               Abundant Hayford Aggrey (born 1981) is a Ghanaian Administrator, gender activist,
+               Abundant Hayford Aggrey is a Ghanaian Administrator, gender activist,
                and the Executive Director of Golden Mothers Vision International and the National President of The Coalition of NGOs for Women and Children.
                Golden Mothers International is an NGO that seeks to address women’s and children four sectorial  (Health, Food, Clothing and Governance) in Ghana.
            </p>

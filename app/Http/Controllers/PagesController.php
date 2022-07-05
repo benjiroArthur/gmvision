@@ -59,4 +59,15 @@ class PagesController extends Controller
         $projects = Project::where('status', 'active')->get();
         return view('pages.payment')->with('projects', $projects);
     }
+
+    public function getImages(Request $request){
+        $path = public_path($request->folderName);
+        $filePath = asset($request->folderName);
+        $files = array_diff(scandir($path), array('.', '..'));
+        $fileList = [];
+        foreach ($files as $file){
+            $fileList[] = $filePath.'/'.$file;
+        }
+        return response()->json($fileList);
+    }
 }

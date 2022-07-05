@@ -40,6 +40,7 @@ Vue.component('gallery-component', require('./components/GalleryComponent.vue').
 Vue.component('dash-component', require('./components/DashboardComponent.vue').default);
 Vue.component('about-ceo', require('./components/AboutCeo.vue').default);
 Vue.component('donation-course', require('./components/Sections/DonationCourse').default);
+Vue.component('images-dialog-component', require('./components/ImagesDialogComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

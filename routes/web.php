@@ -31,5 +31,6 @@ Route::get('statistics', [App\Http\Controllers\VisitorController::class, 'index'
 Route::post('pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
 Route::get('payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('pay-callback');
 Route::get('payment/payment-info', [App\Http\Controllers\PaymentController::class, 'getDonationInfo'])->name('payment-info');
+Route::post('files/get-images', [App\Http\Controllers\PagesController::class, 'getImages'])->name('get-images');
 
 Route::resource('activity-video', App\Http\Controllers\ActivityVideoController::class);
