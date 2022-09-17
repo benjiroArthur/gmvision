@@ -58,6 +58,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Email Address
+    |--------------------------------------------------------------------------
+    |
+    | This Email address will be used as Sender email address when sending emails
+    | to website visitors
+    |
+    */
+
+    'app_email' => env('APP_EMAIL', 'noreply@goldenmothersvision.org'),
+
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |

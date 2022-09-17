@@ -389,10 +389,10 @@
         </div>
     </section><!-- /Causes Section -->
 
-    <section class="causes-section bg-white bd-bottom padding">
+    <section class="nurse-section bg-white bd-bottom padding" >
         <h2 class="text-center">Nurses Recruitment!!!</h2>
         <span class="heading-border"></span>
-        <div class="container">
+        <div class="container" id="nurse-section">
             <div class="causes-wrap row justify-content-center">
                 <div class="col-md-6 xs-padding">
                     <img class="d-block w-100" src="{{asset('img/nurses/nurse-poster.jpg')}}" alt="Banner">
@@ -403,8 +403,13 @@
                     <p>Are you ready to work in the USA?</p>
                     <p>If yes to the above questions, kindly send your CV and transcript to conwaac@gmail.com</p>
                     <p>Registration Fee: <strong>GH¢ 500.00</strong></p>
-                    <p>Processing Fee: <strong>US$ 3900.00</strong></p>
+<!--                    <p>Processing Fee: <strong>US$ 3900.00</strong></p>-->
                     <p><strong>For more information contact: 0247719755</strong></p>
+                    <p><strong>REGISTRATION FEES IS NON REFUNDABLE.</strong></p>
+                    <apply-now-component
+                        csrf-token="{{csrf_token()}}"
+                        register-route="{{route('nurse-registration.store')}}"
+                        payment-route="{{route('pay')}}" ></apply-now-component>
                 </div><!-- /Nurse Content-2 -->
             </div>
         </div>

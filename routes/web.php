@@ -34,3 +34,5 @@ Route::get('payment/payment-info', [App\Http\Controllers\PaymentController::clas
 Route::post('files/get-images', [App\Http\Controllers\PagesController::class, 'getImages'])->name('get-images');
 
 Route::resource('activity-video', App\Http\Controllers\ActivityVideoController::class);
+Route::resource('nurse-registration', App\Http\Controllers\NurseRegistrationController::class);
+Route::post('nurse/verify-registration', [App\Http\Controllers\NurseRegistrationController::class, 'verifyRegistration']);

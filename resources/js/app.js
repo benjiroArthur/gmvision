@@ -4,8 +4,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import moment from "moment";
+
 require('./bootstrap');
 
+import store from "./store";
 import vuetify from "./plugins/vuetify";
 window.Vue = require('vue');
 Vue.use(vuetify);
@@ -41,6 +44,16 @@ Vue.component('dash-component', require('./components/DashboardComponent.vue').d
 Vue.component('about-ceo', require('./components/AboutCeo.vue').default);
 Vue.component('donation-course', require('./components/Sections/DonationCourse').default);
 Vue.component('images-dialog-component', require('./components/ImagesDialogComponent').default);
+Vue.component('apply-now-component', require('./components/NursesSection/ApplyNowComponent').default);
+
+
+
+/**
+ * Vue Filters
+ */
+Vue.filter('longDate', function (text) {
+    return text ? moment(text).format('Do MMMM, YYYY') : ''
+})
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50,5 +63,6 @@ Vue.component('images-dialog-component', require('./components/ImagesDialogCompo
 
 const app = new Vue({
     el: '#app',
-    vuetify: vuetify
+    vuetify: vuetify,
+    store
 });

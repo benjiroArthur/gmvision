@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="shortcut icon" href="{{asset('gmvision-icon.png')}}" />
 
+<!--    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">-->
+
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -35,12 +37,12 @@
         </v-app>
     </div>
     <script>
-        $(document).ready(function(){
+        /*$(document).ready(function(){
             setTimeout(function()
             {
                 $('.alert').fadeOut('slow');
             },5000);
-        });
+        });*/
     </script>
     @yield('script')
 </body>

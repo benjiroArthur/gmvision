@@ -22,7 +22,7 @@
 
             <template v-slot:extension>
                 <v-tabs
-                    v-model="tab"
+                    v-model="dashboardTab"
                     align-with-title
                 >
                     <v-tabs-slider color="white"></v-tabs-slider>
@@ -37,7 +37,7 @@
             </template>
         </v-toolbar>
 
-        <v-tabs-items v-model="tab">
+        <v-tabs-items v-model="dashboardTab">
             <v-tab-item
             >
                 <v-card flat>
@@ -49,7 +49,7 @@
             <v-tab-item
             >
                 <v-card flat>
-                    <v-card-text>Gallery</v-card-text>
+                    <NurseRegistrationComponent></NurseRegistrationComponent>
                 </v-card>
             </v-tab-item>
             <v-tab-item
@@ -85,19 +85,30 @@
 
 <script>
     import UploadVideoActivity from './Sections/UploadVideoActivity'
+    import NurseRegistrationComponent from './Admin/NurseRegistrationComponent'
     export default {
         name: "DashboardComponent",
-        components: {UploadVideoActivity},
+        components: {UploadVideoActivity, NurseRegistrationComponent},
         data () {
             return {
                 tab: null,
                 items: [
-                    'Add Videos', 'Gallery', 'Statistics'
+                    'Add Videos', 'Nurse Registration', 'Statistics'
                 ],
                 dailyStatistics: [],
                 monthlyStatistics: [],
                 trials: 0,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            }
+        },
+        computed: {
+            dashboardTab: {
+                get(){
+                    return this.$store.getters.dashboardTab
+                },
+                set(val){
+                    this.$store.dispatch('getDashboardTab', val)
+                }
             }
         },
         methods: {
