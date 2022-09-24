@@ -413,9 +413,11 @@
 
 <script>
 import validation from "../../Services/validation";
+import RegionalCoordinator from "./RegionalCoordinator";
 export default {
     name: "ApplyNowComponent",
     props: ['paymentRoute', 'csrfToken', 'registerRoute'],
+    components: {RegionalCoordinator},
     data(){
         return{
             ...validation,

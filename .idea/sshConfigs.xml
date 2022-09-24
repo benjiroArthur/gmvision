@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="goldenmothersvision.org" id="d3c284a3-769a-41dd-a3f9-46f60f4bf529" keyPath="D:\gmvision-key\gmvision" port="21098" nameFormat="DESCRIPTIVE" username="goldekjy" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

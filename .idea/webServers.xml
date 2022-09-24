@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bc17c9d0-4f0a-46a9-b77e-ef568a46dd1f" name="gmvision">
+        <fileTransfer accessType="SFTP" host="goldenmothersvision.org" port="21098" sshConfigId="d3c284a3-769a-41dd-a3f9-46f60f4bf529" sshConfig="goldekjy@goldenmothersvision.org:21098 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
