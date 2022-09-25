@@ -49,7 +49,7 @@
             <v-tab-item
             >
                 <v-card flat>
-                    <NurseRegistrationComponent></NurseRegistrationComponent>
+                    <NurseRegistrationComponent :registrationRoute="registrationRoute" :csrfToken="csrfToken"></NurseRegistrationComponent>
                 </v-card>
             </v-tab-item>
             <v-tab-item
@@ -88,6 +88,7 @@
     import NurseRegistrationComponent from './Admin/NurseRegistrationComponent'
     export default {
         name: "DashboardComponent",
+        props: ['registrationRoute', 'csrfToken'],
         components: {UploadVideoActivity, NurseRegistrationComponent},
         data () {
             return {

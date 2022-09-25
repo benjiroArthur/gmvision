@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="container-fluid pt-10">
-        <dash-component></dash-component>
+        <dash-component registration-route="{{route('nurse-registration.store')}}" csrf-token="{{csrf_token()}}"></dash-component>
     </div>
 @endsection
