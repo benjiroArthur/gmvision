@@ -36,3 +36,4 @@ Route::post('files/get-images', [App\Http\Controllers\PagesController::class, 'g
 Route::resource('activity-video', App\Http\Controllers\ActivityVideoController::class);
 Route::resource('nurse-registration', App\Http\Controllers\NurseRegistrationController::class);
 Route::post('nurse/verify-registration', [App\Http\Controllers\NurseRegistrationController::class, 'verifyRegistration']);
+Route::post('nurse/upload-file', [App\Http\Controllers\NurseRegistrationController::class, 'uploadFile']);

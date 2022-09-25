@@ -365,6 +365,48 @@
                                             dense flat
                                         ></v-textarea>
                                     </v-col>
+                                    <v-col cols="12" md="6">
+                                        <v-btn
+                                            v-if="registrationForm.cv_file === null || registrationForm.cv_file === ''"
+                                            class="createBtn"
+                                            color="info"
+                                            depressed
+                                            type="button"
+                                            @click="openUploadDialog('resource/cv', 'Upload CV', 'CV', 'cv_file')"
+                                        >
+                                            Upload CV <v-icon color="white">mdi-upload</v-icon>
+                                        </v-btn>
+                                        <v-text-field
+                                            v-else
+                                            label="CV"
+                                            v-model="registrationForm.cv_file"
+                                            name="cv_file"
+                                            class="fields"
+                                            filled rounded readonly
+                                            dense flat
+                                        ></v-text-field>
+                                    </v-col>
+                                    <v-col cols="12" md="6">
+                                        <v-btn
+                                            v-if="registrationForm.transcript === null || registrationForm.transcript === ''"
+                                            class="createBtn"
+                                            color="info"
+                                            depressed
+                                            type="button"
+                                            @click="openUploadDialog('resource/transcript', 'Upload Transcript', 'transcript', 'transcript')"
+                                        >
+                                            Upload Transcript <v-icon color="white">mdi-upload</v-icon>
+                                        </v-btn>
+                                        <v-text-field
+                                            v-else
+                                            label="CV"
+                                            v-model="registrationForm.transcript"
+                                            name="transcript"
+                                            class="fields"
+                                            filled rounded readonly
+                                            dense flat
+                                        ></v-text-field>
+                                    </v-col>
                                     <input type="hidden" name="_token" :value="csrfToken">
                                     <input type="hidden" name="_method" value="PUT">
                                 </v-row>
@@ -408,6 +450,64 @@
                 </div>
             </v-card>
         </v-dialog>
+        <v-dialog
+            v-model="fileUploadDialog"
+            width="300"
+        >
+            <v-card class="p-12">
+                <div class="row p-0 m-0">
+                    <div class="col-md-12 col-sm-12" v-if="uploadForm.uploadMessage !== ''">
+                        <v-card-title class="d-flex justify-content-center text-center text-primary">
+                            {{uploadForm.uploadMessage}}
+                        </v-card-title>
+                        <v-divider></v-divider>
+                        <v-form ref="fileUploadForm" v-model="uploadValid" method="POST">
+
+                            <v-card-text>
+                                <v-row class="pa-0 m-0">
+                                    <v-col cols="12" md="12">
+                                        <span class="text-danger">{{uploadErrorMessage}}</span>
+                                    </v-col>
+                                </v-row>
+                                <v-row class="pa-0 m-0">
+                                    <v-col cols="12" md="12">
+                                        <v-file-input
+                                            :label="uploadForm.uploadMessage"
+                                            name="name"
+                                            v-model="uploadForm.file"
+                                            class="fields"
+                                            accept="application/pdf"
+                                            filled rounded
+                                            dense flat
+                                            :rules="[selectionRequired('File')]"
+                                        ></v-file-input>
+                                    </v-col>
+                                </v-row>
+                            </v-card-text>
+                            <v-card-actions class="d-flex justify-content-center text-center">
+                                <v-btn
+                                    color="grey"
+                                    type="button" class="text-white"
+                                    @click="cancelUploadFile()"
+                                >
+                                    cancel
+                                </v-btn>
+                                <v-btn
+                                    class="createBtn"
+                                    color="info"
+                                    depressed
+                                    type="button"
+                                    :loading="loadingUpload"
+                                    @click="uploadFile()"
+                                >
+                                    Upload
+                                </v-btn>
+                            </v-card-actions>
+                        </v-form>
+                    </div>
+                </div>
+            </v-card>
+        </v-dialog>
     </div>
 </template>
 
@@ -423,11 +523,21 @@ export default {
             ...validation,
             trials: 0,
             dialog: false,
+            fileUploadDialog: false,
             registrationDialog: false,
             registrationValid: false,
             valid: false,
+            uploadValid: false,
             loadingRegister: false,
+            loadingUpload: false,
             validRegistration: false,
+            uploadForm: new Form({
+                name: '',
+                path: '',
+                file: null,
+                uploadMessage: '',
+                type: ''
+            }),
             paymentForm: new Form({
                 name: '',
                 email: '',
@@ -453,11 +563,15 @@ export default {
                 residential_address: '',
                 travel_experience: '',
                 website: '',
+                cv_file: '',
+                transcript: '',
+
             }),
             isRegistered: false,
             dob_menu: false,
             showMessage: false,
-            responseMessage: ''
+            responseMessage: '',
+            uploadErrorMessage: '',
         }
     },
     methods: {
@@ -498,7 +612,44 @@ export default {
         submitNurseRegister(){
             if(!this.$refs.nurseRegisterForm.validate()) return
             this.$refs.RegisterNurseButton.$el.click()
-        }
+        },
+        uploadFile(){
+            if(!this.$refs.fileUploadForm.validate()) return
+            this.loadingUpload = true
+            let file = this.uploadForm.file[0]
+            let formData = new FormData()
+
+            _.each(this.uploadForm, (value, key) => {
+                formData.append(key, value)
+            })
+            axios.post('/nurse/upload-file', formData,
+                {
+                    headers: {
+                        'Content-Type': "multipart/form-data"
+                    }
+                })
+                .then((response) => {
+                    this.registrationForm[this.uploadForm.type] = response.data.filename
+                    this.loadingUpload = false
+                    this.fileUploadDialog = false
+                    this.uploadForm.reset()
+                })
+                .catch((error) => {
+                    this.uploadErrorMessage = error.response.data.message
+                    this.loadingUpload = false
+                })
+        },
+        cancelUploadFile(){
+            this.uploadForm.file = null
+            this.fileUploadDialog = false
+        },
+        openUploadDialog(path, message, name, type){
+            this.uploadForm.path = path
+            this.uploadForm.type = type
+            this.uploadForm.name = this.registrationForm.name.trim().replace(' ', '')+'_'+name
+            this.uploadForm.uploadMessage = message
+            this.fileUploadDialog = true
+        },
     },
     created() {
         //this.getImageList()

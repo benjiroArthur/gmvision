@@ -13,6 +13,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env.example_two
-.env.example_two
 gmvision.zip
-.idea
+./idea

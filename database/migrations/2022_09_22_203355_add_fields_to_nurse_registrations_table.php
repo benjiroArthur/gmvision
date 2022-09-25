@@ -14,7 +14,8 @@ class AddFieldsToNurseRegistrationsTable extends Migration
     public function up()
     {
         Schema::table('nurse_registrations', function (Blueprint $table) {
-            //
+            $table->string('cv_file')->nullable();
+            $table->string('transcript')->nullable();
         });
     }
 

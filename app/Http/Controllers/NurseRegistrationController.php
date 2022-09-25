@@ -7,6 +7,7 @@ use App\Models\NurseRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class NurseRegistrationController extends Controller
 {
@@ -124,5 +125,27 @@ class NurseRegistrationController extends Controller
         }
 
         return response()->json('Invalid Registration Code Or Email', 403);
+    }
+
+    public function uploadFile(Request $request){
+        $this->validate($request,[
+            'file' => 'required',
+            'path' => 'required',
+            'name' => 'required'
+        ]);
+        $uploadFile = $request->file;
+        $filename = $request->name.'_'.time().'.pdf';
+        $filePath = $request->path;
+
+        try {
+            if(Storage::disk('public')->putFileAs($filePath, $uploadFile, $filename)){
+                return response()->json(['status' => 'success', 'filename' => $filename]);
+            } else{
+                return response()->json(['status' => 'error', 'message' => 'Error Uploading File'], 400);
+            }
+        } catch (\Exception $exception){
+            return response()->json(['status' => 'error', 'message' => 'Error Uploading File'], 500);
+        }
+
     }
 }

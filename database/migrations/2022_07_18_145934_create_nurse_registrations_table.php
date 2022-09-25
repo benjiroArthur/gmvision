@@ -34,6 +34,8 @@ class CreateNurseRegistrationsTable extends Migration
             $table->string('received_by')->nullable();
             $table->string('confirmed_by')->nullable();
             $table->string('status')->default('processing');
+            $table->string('cv_file')->nullable();
+            $table->string('transcript')->nullable();
             $table->timestamps();
         });
     }

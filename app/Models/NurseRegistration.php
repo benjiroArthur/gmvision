@@ -25,7 +25,19 @@ class NurseRegistration extends Model
         'postal_address',
         'experience',
         'organizations_worked_with',
-        'travel_experience'
+        'travel_experience',
+        'received_by',
+        'confirmed_by',
+        'status',
+        'cv_file',
+        'transcript'
     ];
+
+    protected $appends = ['registration_status'];
+
+    public function getRegistrationStatusAttribute(){
+        return ($this->dob !== null && $this->cv_file !== null && $this->transcript !== null)
+            ? 'completed' : 'pending';
+    }
 
 }
