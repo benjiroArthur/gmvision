@@ -37,7 +37,7 @@ class NurseRegistration extends Model
 
     public function getRegistrationStatusAttribute(){
         return ($this->dob !== null && $this->cv_file !== null && $this->transcript !== null)
-            ? 'completed' : 'pending';
+            ? 'Completed' : 'Pending';
     }
 
 }
