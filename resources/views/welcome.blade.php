@@ -405,7 +405,7 @@
                 </div><!-- /Nurse Banner-1 -->
             </div>
             <div class="causes-wrap row justify-content-center">
-                <div class="col-md-5 xs-padding text-center">
+                <div class="col-md-8 xs-padding text-center">
                     <p><strong>Are you a qualified nurse? Are you ready to work in the USA?</strong></p>
 
                     <apply-now-component
@@ -418,10 +418,11 @@
                     <p><strong>For more information contact: 0247719755</strong></p>
                     <p><strong>REGISTRATION FEES IS NON REFUNDABLE.</strong></p>
                 </div><!-- /Nurse Banner-1 -->
-                <div class="col-md-5 xs-padding">
+<!--                <div class="col-md-5 xs-padding">
                     <img width="auto" class="d-block w-100" src="{{asset('img/nurses/benson.jpg')}}" alt="Banner">
 
-                </div><!-- /Nurse Content-2 -->
+                </div>-->
+                <!-- /Nurse Content-2 -->
             </div>
         </div>
     </section><!-- /Nurses Section -->
